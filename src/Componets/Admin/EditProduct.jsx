@@ -8,6 +8,8 @@ import { productContext } from '../../Context/ProductContext';
 export default function EditProduct  () {
     const [values, setValues] = useState({
         title: '',
+        size: '',
+        color: '',
         image: '',
         price: '',
         type: '',
@@ -104,6 +106,16 @@ export default function EditProduct  () {
                         onChange={handleEditInp} 
                         value={values.description} variant='outlined' 
                         label='Description'/>
+                    <TextField 
+                        style={{padding: '10px'}} name='size' 
+                        onChange={handleEditInp} 
+                        value={values.size} variant='outlined' 
+                        label='Size'/>
+                    <TextField 
+                        style={{padding: '10px'}} name='color' 
+                        onChange={handleEditInp} 
+                        value={values.color} variant='outlined' 
+                        label='Color'/>    
                 </form>
                 <Link to='/'>
                     <Button onClick={handleSave} variant='contained' color='warning'>Save</Button>

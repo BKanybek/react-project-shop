@@ -10,6 +10,8 @@ const AddProduct = () => {
     const [values, setValues] = React.useState({
         name: '',
         type: '',
+        size: '',
+        color: '',
         description: '',
         image: '',
     })
@@ -44,7 +46,7 @@ const AddProduct = () => {
       }}
     >
       <Paper elevation={3}>
-        <h1 style={{textAlign: 'center'}}>Добавить персонал</h1>
+        <h1 style={{textAlign: 'center'}}>Добавить товар</h1>
         <div style={{display: 'flex', justifyContent: 'space-around', color: 'black'}}>
             <div style={{margin: '10px'}}>
                 <img width='300' src={values.image ? values.image : 'https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_960_720.png' } />
@@ -63,11 +65,13 @@ const AddProduct = () => {
                     alignItems: 'center'
                 }}>
                     <TextField style={{padding: '10px'}} name='name' onChange={handleInp} value={values.name} variant='outlined' label='Name'/>
+                    <TextField style={{padding: '10px'}} name='size' onChange={handleInp} value={values.size} variant='outlined' label='Size'/>
+                    <TextField style={{padding: '10px'}} name='color' onChange={handleInp} value={values.color} variant='outlined' label='Color'/>
                     <TextField style={{padding: '10px'}} name='type' onChange={handleInp} value={values.type} variant='outlined' label='Type'/>
                     <TextField style={{padding: '10px'}} name='image' onChange={handleInp} value={values.image} variant='outlined' label='Image'/>
                     <TextField style={{padding: '10px'}} name='description' onChange={handleInp} value={values.description} variant='outlined' label='Description'/>
                 </form>
-                <Link to='/list'>
+                <Link to='/'>
                  <Button onClick={handleSave} variant="contained" color='warning'>Добавить</Button>  
                 </Link>
             </div>
