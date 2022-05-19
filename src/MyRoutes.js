@@ -1,4 +1,4 @@
-import { List } from '@mui/material';
+
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AddProduct from './Componets/Admin/AddProduct';
@@ -10,8 +10,8 @@ const MyRoutes = () => {
     return (
         <ProductsContextProvider>
             <BrowserRouter>
+            <NavBar/>
                 <Routes>
-                    <Route path='/' element={<NavBar/>}/>
                     <Route path='/add' element={<AddProduct/>}/>
                     <Route path='/list' element={<ListProduct/>}/>
                 </Routes>
