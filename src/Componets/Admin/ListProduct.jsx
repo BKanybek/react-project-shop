@@ -3,8 +3,8 @@ import { useNavigate, useSearchParams} from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import { Box, Grid, InputBase, Pagination, Stack } from '@mui/material';
-import Filter from './Filter/Filter';
-import './ListObject.css'
+// import Filter from './Filter/Filter';
+// import './ListObject.css'
 import { Button, Form, FormControl } from 'react-bootstrap';
 import { productContext } from '../../Context/ProductContext';
 import ProductCard from '../ProductCard/ProductCard';
@@ -97,7 +97,7 @@ const ListProduct = () => {
 
     return (
         <div style={{}}>
-            <Filter /> 
+            {/* <Filter />  */}
                 <Form className="d-flex justify-content-center p-5">
                     <FormControl
                         type="search"
