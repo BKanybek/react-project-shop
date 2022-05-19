@@ -165,7 +165,7 @@ export default function NavBar() {
       <NavDropdown title="More" id="navbarScrollingDropdown">
       <div style={{display: 'flex', flexDirection: 'column'}}>
         <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Reviews</Link>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Contacts</Link>
+        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Contacts</Link>
       </div>
       <NavDropdown.Divider />
       <NavDropdown.Item href="#a">
@@ -202,8 +202,8 @@ export default function NavBar() {
                 <AccountCircle sx={{marginTop:'3px'}} />
               </IconButton>
             </Box>
-            {renderMobileMenu}
-            {renderMenu}   
+            {/* {renderMobileMenu} */}
+            {/* {renderMenu}    */}
 </Navbar.Collapse>
 </Container>
 </Navbar>
