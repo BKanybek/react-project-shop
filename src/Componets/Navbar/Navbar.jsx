@@ -11,7 +11,7 @@ import { productContext } from '../../Context/ProductContext';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Menu } from '@mui/icons-material';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import Logo from '../Images/Logo2.png'
+import Logo from '../Images/Logo11.png'
 
 
 
@@ -154,29 +154,31 @@ export default function NavBar() {
     <div>
     <Navbar className='navbar' expand="lg">
       <Container fluid>
-      <div><img style={{width: '100px', height: '100px'}} src={Logo} alt="" /></div>
+      <div><img style={{width: '50px', height: '50px'}} src={Logo} alt="" /></div>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
       <Nav style={{ paddingLeft: '1px'}}
         className="me-auto my-2 my-lg-0"
         navbarScroll
         >
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black'}} to="/">Home</Link>
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black'}} to="/">Equipment</Link>
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black'}}  to="/">Specialists</Link>
-      <NavDropdown title="More" id="navbarScrollingDropdown">
+        <NavDropdown style={{border: 'none'}} title={<span style={{fontWeight: '800', color: 'black'}}>Каталог</span>} id="navbarScrollingDropdown">
       <div style={{display: 'flex', flexDirection: 'column'}}>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Reviews</Link>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Contacts</Link>
+        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Посмотреть все</Link>
+        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Кожа</Link>
+        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Джинсы</Link>
+        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Топы и Рубашки</Link>
+        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Юбки и Платья</Link>
+        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Брюки и шорты</Link>
+        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Деним</Link>
+        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Верхняя одежда</Link>
       </div>
-      <NavDropdown.Divider />
-      <NavDropdown.Item href="#a">
-      About us
-      </NavDropdown.Item>
       </NavDropdown>
+      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '16px'}} to="/">О брендах</Link>
+      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '16px'}} to="/">Таблица Размеров</Link>
+      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '16px'}}  to="/">Контакты</Link>
+    
       </Nav>
       <Box sx={{ flexGrow: 1 }} /> 
-
           <Box sx={{ display: { md: 'd-flex' } }}>
             <Link to='/cart'>
                   <IconButton>
