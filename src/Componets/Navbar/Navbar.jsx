@@ -6,10 +6,12 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Button, Box } from '@mui/material';
-import { Container, Nav, Navbar, NavDropdown,} from 'react-bootstrap';
+// import { Container, Nav, Navbar, NavDropdown,} from 'react-bootstrap';
 import { productContext } from '../../Context/ProductContext';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Menu } from '@mui/icons-material';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import Logo from '../Images/Logo2.png'
 
 
 
@@ -152,13 +154,13 @@ export default function NavBar() {
     <div>
     <Navbar className='navbar' expand="lg">
       <Container fluid>
-      {/* <div><img style={{width: '50px', height: '50px'}} src={} alt="" /></div> */}
+      <div><img style={{width: '100px', height: '100px'}} src={Logo} alt="" /></div>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
-      <Nav style={{ paddingLeft: '10px'}}
-      className="me-auto my-2 my-lg-0"
-      navbarScroll
-      >
+      <Nav style={{ paddingLeft: '1px'}}
+        className="me-auto my-2 my-lg-0"
+        navbarScroll
+        >
       <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black'}} to="/">Home</Link>
       <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black'}} to="/">Equipment</Link>
       <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black'}}  to="/">Specialists</Link>
@@ -202,7 +204,7 @@ export default function NavBar() {
                 <AccountCircle sx={{marginTop:'3px'}} />
               </IconButton>
             </Box>
-            {/* {renderMobileMenu} */}
+            {/* {renderMobileMenu}   */}
             {/* {renderMenu}    */}
 </Navbar.Collapse>
 </Container>
