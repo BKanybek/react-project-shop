@@ -11,8 +11,7 @@ import { productContext } from '../../Context/ProductContext';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Menu } from '@mui/icons-material';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import Logo from '../Images/Logo11.png'
-
+import Logo from "../Images/Logo/Logo1.PNG"
 
 
 export default function NavBar() {
@@ -152,12 +151,12 @@ export default function NavBar() {
   
   return (
     <div>
-    <Navbar className='navbar' expand="lg">
+    <Navbar style={{padding: '0 100px'}} className='navbar' expand="lg">
       <Container fluid>
-      <div><img style={{width: '50px', height: '50px'}} src={Logo} alt="" /></div>
+      <div><img style={{width: '100px', height: '100px'}} src={Logo} alt="" /></div>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
-      <Nav style={{ paddingLeft: '1px'}}
+      <Nav style={{ paddingLeft: '50px'}}
         className="me-auto my-2 my-lg-0"
         navbarScroll
         >
