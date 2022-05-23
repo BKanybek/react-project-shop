@@ -3,14 +3,14 @@ import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Button, Box } from '@mui/material';
-// import { Container, Nav, Navbar, NavDropdown,} from 'react-bootstrap';
 import { productContext } from '../../Context/ProductContext';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Menu } from '@mui/icons-material';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { AiOutlineShopping, AiOutlineUser } from "react-icons/ai";
+import { FaRegHeart} from "react-icons/fa";
 import Logo from "../Images/Logo/Logo1.PNG"
 
 
@@ -19,6 +19,7 @@ export default function NavBar() {
     const [ searchParams, setSearchParams ] = useSearchParams()
     const[ searchVal, setSearchVal ] = React.useState(searchParams.get('q') ? searchParams.get('q') : '')
     const currentUser = useAuth()
+
     async function handleLogOut(){
       try {
         await logout()
@@ -119,7 +120,7 @@ export default function NavBar() {
         <Link to='/cart' style={{color: 'white'}}>
         <IconButton sx={{color: 'black'}} color="inherit">
             <Badge badgeContent={cartLength} color="secondary">
-                <ShoppingCartIcon sx={{display: 'flex', justifyContent: 'center'}} />
+            
             </Badge>
         </IconButton>
         </Link>
@@ -153,57 +154,42 @@ export default function NavBar() {
     <div>
     <Navbar style={{padding: '0 100px'}} className='navbar' expand="lg">
       <Container fluid>
-      <div><img style={{width: '100px', height: '100px'}} src={Logo} alt="" /></div>
+      <div><img style={{width: '50px', height: '50px'}} src={Logo} alt="" /></div>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
-      <Nav style={{ paddingLeft: '50px'}}
-        className="me-auto my-2 my-lg-0"
-        navbarScroll
-        >
-        <NavDropdown style={{border: 'none'}} title={<span style={{fontWeight: '800', color: 'black'}}>Каталог</span>} id="navbarScrollingDropdown">
+      <Nav style={{ paddingLeft: '50px'}} className="me-auto my-2 my-lg-0" navbarScroll>
+        <NavDropdown style={{border: 'none'}} title={<span style={{fontWeight: '800', color: 'black', fontSize: '18px'}}>Каталог</span>} id="navbarScrollingDropdown">
       <div style={{display: 'flex', flexDirection: 'column'}}>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Посмотреть все</Link>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Кожа</Link>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Джинсы</Link>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Топы и Рубашки</Link>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Юбки и Платья</Link>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Брюки и шорты</Link>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Деним</Link>
-        <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Верхняя одежда</Link>
-      </div>
+          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Посмотреть все</Link>
+          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Кожа</Link>
+          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Джинсы</Link>
+          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Топы и Рубашки</Link>
+          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Юбки и Платья</Link>
+          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Брюки и шорты</Link>
+          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Деним</Link>
+          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Верхняя одежда</Link>
+      </div>  
       </NavDropdown>
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '16px'}} to="/">О брендах</Link>
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '16px'}} to="/">Таблица Размеров</Link>
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '16px'}}  to="/">Контакты</Link>
+      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '18px'}} to="/">О брендах</Link>
+      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '18px'}} to="/">Таблица Размеров</Link>
+      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '18px'}}  to="/">Контакты</Link>
     
       </Nav>
       <Box sx={{ flexGrow: 1 }} /> 
           <Box sx={{ display: { md: 'd-flex' } }}>
             <Link to='/cart'>
-                  <IconButton>
-                      <Badge badgeContent={cartLength} color='secondary' sx={{paddingTop: '10'}}>
-                          <ShoppingCartIcon sx={{color: 'black', marginTop: '5px'}}/>
+                      <Badge badgeContent={cartLength}>
+                        <AiOutlineShopping size='1.5em'/>
                       </Badge>
-                  </IconButton>
             </Link>
-            <Link to='/favorite' style={{color: 'white'}}>
-              <IconButton>
-                 <Badge badgeContent={starLength} color='secondary'>
-                    <FavoriteIcon sx={{color: 'black'}}/>
+            <Link to='/favorite'>
+                 <Badge badgeContent={starLength}>
+                    <FaRegHeart size='1.2em'/>
                  </Badge>
-              </IconButton>
             </Link>
-              <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
-                color="inherit"
-              >
-                <AccountCircle sx={{marginTop:'3px'}} />
-              </IconButton>
+            <Link to='/'>
+                <AiOutlineUser size='1.2em' />
+            </Link>
             </Box>
             {/* {renderMobileMenu}   */}
             {/* {renderMenu}    */}
