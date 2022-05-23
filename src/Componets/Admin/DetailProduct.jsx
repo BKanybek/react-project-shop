@@ -21,7 +21,7 @@ const DetailProduct = () => {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat'
                 }} sx={{width: '100%', height: '75vh', boxShadow: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center',}}>
-                <Typography className='title' variant='h2' style={{textAlign: 'center', paddingBottom: '20px'}}>О специалисте</Typography>
+                <Typography className='title' variant='h2' style={{textAlign: 'center', paddingBottom: '20px'}}>О товаре</Typography>
                 {
                     detail ? (
                         <div  style={{ background: 'white', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'start', padding: 20,  flexWrap: 'wrap'}}>
