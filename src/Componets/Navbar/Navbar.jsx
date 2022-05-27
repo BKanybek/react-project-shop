@@ -180,7 +180,7 @@ export default function NavBar() {
             <Link to='/cart'>
                       <Badge badgeContent={cartLength}>
                         <AiOutlineShopping size='1.5em'/>
-                      </Badge>
+                      </Badge> 
             </Link>
             <Link to='/favorite'>
                  <Badge badgeContent={starLength}>
