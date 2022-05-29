@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "name": "1",
+      "name": "Test",
       "type": "1",
       "description": "1",
-      "image": "1",
-      "price": null,
+      "image": "https://amourrr.com/upload/resize_cache/iblock/546/281_341_1/546011f3ba683428f80d9f3e26ec6053.jpg",
+      "price": 1333,
       "id": 1
     },
     {
@@ -15,8 +15,78 @@
       "color": "RED",
       "description": "1123",
       "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
-      "price": null,
+      "price": 1500,
       "id": 2
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 2000,
+      "id": 3
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 4
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 5
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 6
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 7
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 8
+    },
+    {
+      "name": "топ",
+      "type": "кожа",
+      "size": "s",
+      "color": "черный",
+      "description": "1",
+      "image": "https://amourrr.com/upload/resize_cache/iblock/984/281_341_1/98478254ab1c5b14dec375f420decfdd.jpg",
+      "price": 5000,
+      "id": 9
     }
   ]
 }

@@ -1,0 +1,49 @@
+.rec.rec-arrow {
+    width: 25px;
+    height: 25px;
+    min-width: 33px;
+    line-height: 25px;
+    border-radius: 0;
+    font-size: 1em;
+    visibility: visible;
+  }
+  
+  .rec.rec-arrow:hover {
+    background: black;
+  }
+  /* hide disabled buttons */
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+  }
+  /* disable default outline on focused items */
+  /* add custom outline on focused items */
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px lightgrey;
+  }
+  
+  
+  @media all and (max-width: 830px) {
+    .rec-carousel-wrapper {
+      padding: 0;
+    }
+  }
+
+  .rec.rec-pagination{
+      display: none;
+  }
+  
+  
+  
+  /* .button{
+    background-color: red;
+  } */
+
+.css-46bh2p-MuiCardContent-root:last-child {
+    padding: 0px;
+}
+
+.MuiCardContent-root{
+    padding: 0px;
+}
+

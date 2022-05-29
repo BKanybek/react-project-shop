@@ -152,13 +152,13 @@ export default function NavBar() {
   
   return (
     <div>
-    <Navbar style={{padding: '0 100px'}} className='navbar' expand="lg">
+    <Navbar style={{maxWidth: '1360px', margin: 'auto', paddingTop: '20px'}} className='navbar' expand="lg">
       <Container fluid>
       <div><img style={{width: '50px', height: '50px'}} src={Logo} alt="" /></div>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
-      <Nav style={{ paddingLeft: '50px'}} className="me-auto my-2 my-lg-0" navbarScroll>
-        <NavDropdown style={{border: 'none'}} title={<span style={{fontWeight: '800', color: 'black', fontSize: '18px'}}>Каталог</span>} id="navbarScrollingDropdown">
+      <Nav className="me-auto my-2 my-lg-0" navbarScroll>
+        <NavDropdown title={<span style={{fontWeight: '800', color: 'black', fontSize: '18px'}}>Каталог</span>} id="navbarScrollingDropdown">
       <div style={{display: 'flex', flexDirection: 'column'}}>
           <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Посмотреть все</Link>
           <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Кожа</Link>
@@ -171,24 +171,24 @@ export default function NavBar() {
       </div>  
       </NavDropdown>
       <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '18px'}} to="/">О брендах</Link>
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '18px'}} to="/">Таблица Размеров</Link>
+      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '18px'}} to="/">Таблица размеров</Link>
       <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', marginLeft: '2vw', fontSize: '18px'}}  to="/">Контакты</Link>
     
       </Nav>
-      <Box sx={{ flexGrow: 1 }} /> 
+      <Box/> 
           <Box sx={{ display: { md: 'd-flex' } }}>
-            <Link to='/cart'>
+            <Link style={{marginRight: '20px'}} to='/cart'>
                       <Badge badgeContent={cartLength}>
-                        <AiOutlineShopping size='1.5em'/>
+                        <AiOutlineShopping size='1.5em' color='black' fontSize='20px'/>
                       </Badge> 
             </Link>
-            <Link to='/favorite'>
+            <Link style={{marginRight: '20px'}} to='/favorite'>
                  <Badge badgeContent={starLength}>
-                    <FaRegHeart size='1.2em'/>
+                    <FaRegHeart size='1.2em' color='black' fontSize='20px'/>
                  </Badge>
             </Link>
-            <Link to='/'>
-                <AiOutlineUser size='1.2em' />
+            <Link style={{marginRight: '20px'}} to='/'>
+                <AiOutlineUser size='1.2em' color='black' fontSize='20px'/>
             </Link>
             </Box>
             {/* {renderMobileMenu}   */}

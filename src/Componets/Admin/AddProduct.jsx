@@ -14,6 +14,7 @@ const AddProduct = () => {
         color: '',
         description: '',
         image: '',
+        price: '',
     })
 
     const { addProduct } = React.useContext(productContext)
@@ -69,6 +70,7 @@ const AddProduct = () => {
                     <TextField style={{padding: '10px'}} name='color' onChange={handleInp} value={values.color} variant='outlined' label='Color'/>
                     <TextField style={{padding: '10px'}} name='type' onChange={handleInp} value={values.type} variant='outlined' label='Type'/>
                     <TextField style={{padding: '10px'}} name='image' onChange={handleInp} value={values.image} variant='outlined' label='Image'/>
+                    <TextField style={{padding: '10px'}} name='price' onChange={handleInp} value={values.price} variant='outlined' label='Price'/>
                     <TextField style={{padding: '10px'}} name='description' onChange={handleInp} value={values.description} variant='outlined' label='Description'/>
                 </form>
                 <Link to='/'>
