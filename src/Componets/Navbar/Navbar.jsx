@@ -11,7 +11,7 @@ import { Menu } from '@mui/icons-material';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { AiOutlineShopping, AiOutlineUser } from "react-icons/ai";
 import { FaRegHeart} from "react-icons/fa";
-import Logo from "../Images/Logo/Logo1.PNG"
+import Logo from "../Images/Logo/Logo1.PNG"; 
 
 
 export default function NavBar() {

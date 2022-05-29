@@ -114,7 +114,7 @@ const ListProduct = () => {
                     {
                         products ? (
                             products.map((item, index) => (
-                                    <Grid sx={{display: 'flex', justifyContent: 'center'}} item xs={1} sm={4} md={4}  key={index}>
+                                    <Grid sx={{display: 'flex', justifyContent: 'center'}} item xs={1} sm={1} md={3} xl={3}  key={index}>
                                         <ProductCard item={item} key={index}/>
                                     </Grid>
                             ))
