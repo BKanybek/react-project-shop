@@ -60,13 +60,11 @@ export default function ProductCard({item}) {
                 </Typography>  
               <Typography sx={{fontSize: '20px', color: 'black', textAlign: 'center', paddingTop: '20px'}}>
                 {item.type}
-              </Typography>
-            {currentUser?.email === "admin1@gmail.com" ? ( 
+              </Typography> 
               <Typography sx={{fontSize: '13px', paddingTop: '5px', textAlign: 'center'}}>
                 {item.description}
               </Typography>
-              ): null
-            }
+              
             </Link>
             <div style={{display: 'flex', justifyContent: 'center', paddingBottom: '10px'}}>
                 {icons}
