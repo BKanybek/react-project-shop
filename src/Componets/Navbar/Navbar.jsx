@@ -11,7 +11,7 @@ import { Menu } from '@mui/icons-material';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { AiOutlineShopping, AiOutlineUser } from "react-icons/ai";
 import { FaRegHeart} from "react-icons/fa";
-import Logo from "../Images/Logo/Logo1.PNG"; 
+import Logo from "../Images/Logo/03.png.png"; 
 
 
 export default function NavBar() {
@@ -154,7 +154,7 @@ export default function NavBar() {
     <div>
     <Navbar style={{maxWidth: '1360px', margin: 'auto', paddingTop: '20px'}} className='navbar' expand="lg">
       <Container fluid>
-      <div><img style={{width: '50px', height: '50px'}} src={Logo} alt="" /></div>
+      <img style={{width: '10%', height: '10%'}} src={Logo} alt="" />
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
       <Nav className="me-auto my-2 my-lg-0" navbarScroll>
