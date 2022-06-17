@@ -169,7 +169,7 @@ export default function NavBar() {
     <Navbar style={{maxWidth: '1360px', margin: 'auto', paddingTop: '20px'}} className='navbar' expand="lg">
       <Container style={{margin: 'auto'}}>
       <img style={{width: '80px', height: '30px', paddingRight: '10px'}} src={Logo} alt="" />
-      <Form className="d-flex justify-content-center p-5">
+      <Form className="d-flex justify-content-center">
                     <FormControl
                         type="search"
                         placeholder="Search"

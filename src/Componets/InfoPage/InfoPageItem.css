@@ -1,0 +1,15 @@
+.wrapper{
+    display: flex;
+    padding: 20px;
+    max-width: 1300px;
+    margin: auto;
+
+}
+
+@media all and (max-width: 900px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        /* background-color: red; */
+    }
+}
