@@ -38,14 +38,12 @@ const Slider = () => {
     
     return (
       <>
-        <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap' }}>
-        </div>
             <div className='Slider' >
               <Carousel style={{ maxWidth: '1398px', margin: 'auto'}} breakPoints={breakPoints} >
                   {
                     products ? (
                       products.map((item, index) => (
-                          <Card style={{padding: '0px'}} key={index}>
+                          <Card style={{}} key={index}>
                             <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}> 
                               <CardMedia
                                 sx={{width: '166px', height: '220px'}}

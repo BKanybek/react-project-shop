@@ -45,33 +45,26 @@ export default function ProductCard({item}) {
     )
   return (
     <>
-          <Card sx={{ maxWidth: 306, minWidth: 306 }}>
+          <Card sx={{ maxWidth: 306, minWidth: 306}} style={{boxShadow: 'none'}}>
             <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}> 
               <CardMedia 
-                width='300px'
-                height='250px'
+                width='306px'
+                height='350px'
                 component="img"
                 image={item.image}
                 alt={item.title}
               /> 
 
-                <Typography sx={{paddingTop: '5px', fontSize: '20px', textAlign: 'center'}}>
+                <Typography sx={{paddingTop: '5px', fontSize: '15px', paddingTop: '20px'}}>
                   {item.name}
                 </Typography>  
-              <Typography sx={{fontSize: '20px', color: 'black', textAlign: 'center', paddingTop: '20px'}}>
-                {item.type}
+              <Typography sx={{fontSize: '20px', paddingTop: '20px', fontWeight: 'bold'}} >
+                {item.price} KGS
               </Typography> 
-              <Typography sx={{fontSize: '13px', paddingTop: '5px', textAlign: 'center'}}>
-                {item.description}
-              </Typography>
-              
             </Link>
             <div style={{display: 'flex', justifyContent: 'center', paddingBottom: '10px'}}>
                 {icons}
               </div>
-              {/* <div style={{display: 'flex', justifyContent: 'center', paddingBottom: '10px'}}>
-                <ProductStar/>
-              </div> */}
         </Card>
         </>     
   );
