@@ -20,11 +20,11 @@ const ListProduct = () => {
     return (
         <div>
             <Box  sx={{ maxWidth: '1300px', flexGrow: 1, margin: 'auto'}}>
-                <Grid container spacing={{xs: 1, sm: 2, md: 10, lg: 4, }} columns={{xs: 2, sm: 2, md: 10, lg: 12}}>
+                <Grid container spacing={{xs: 2, sm: 4, md: 10, lg: 4, }} columns={{xs: 4, sm: 8, md: 12}}>
                     {
                         products ? (
                             products.map((item, index) => (
-                                    <Grid  item xs={1} sm={1} md={3} lg={3}  key={index}>
+                                    <Grid  item xs={2} sm={4} md={4} key={index}>
                                         <ProductCard item={item} key={index}/>
                                     </Grid>
                             ))

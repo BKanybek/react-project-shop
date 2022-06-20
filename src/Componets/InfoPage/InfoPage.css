@@ -1,13 +1,14 @@
+
+
 .img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;  
 }
 .container-wrapper{
     margin: 3px;
     height: 40vh;
-    position: relative;
-    background-color: red;
+    position: relative; 
 }
 
 .info{
@@ -30,10 +31,12 @@
 
 .button{
     border: none;
-    padding: 10px;
-    background-color: white;
-    color: gray;
+    padding: 4px 16px;
+    /* background-color: white; */
+    border: 1px solid #fff;
+    color: #fff;
     cursor: pointer;
     font-weight: 700;
+    text-decoration: none;
 }
 

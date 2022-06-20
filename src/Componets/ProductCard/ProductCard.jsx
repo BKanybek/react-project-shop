@@ -45,10 +45,10 @@ export default function ProductCard({item}) {
     )
   return (
     <>
-          <Card style={{boxShadow: 'none'}}>
+          <Card style={{width: '300px', boxShadow: 'none', margin: '20px 0px'}}>
             <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}> 
               <CardMedia 
-
+                height='230px'
                 component="img"
                 image={item.image}
                 alt={item.title}
