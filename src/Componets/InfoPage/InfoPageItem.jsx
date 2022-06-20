@@ -5,10 +5,10 @@ const InfoPageItem = ({item}) => {
     console.log(item.img)
     return (
         <div className='container-wrapper'>
-            <img className='img' src={item.img} alt='test'/>    
+                <img className='img' src={item.img} alt='test'/>    
             <div className='info'>
                 <h1 className='title'>{item.title}</h1>
-                <button className='button'>Подробнее</button>
+                <a href='/' className='button'> Подробнее</a>
             </div>
             
         </div>

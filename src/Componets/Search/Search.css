@@ -1,0 +1,31 @@
+.search{
+    display: flex;
+    justify-content: center;
+}
+
+.searchInput{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.crossIcon{
+    position: absolute;
+    top: 1;
+    right: 0;
+    margin-right: 10px;
+}
+
+.searchIcon{
+    padding: 0 20px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+}
+
+.inputSearch{
+    padding: 5px 8px;
+}
+
