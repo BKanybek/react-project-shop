@@ -1,9 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate, useSearchParams} from 'react-router-dom';
 import { Box, Grid, InputBase, Pagination, Stack } from '@mui/material';
-// import Filter from './Filter/Filter';
 // import './ListObject.css'
-
 import { productContext } from '../../Context/ProductContext';
 import ProductCard from '../ProductCard/ProductCard';
 
@@ -21,14 +19,12 @@ const ListProduct = () => {
 
     return (
         <div>
-            {/* <Filter />  */}
-
-            <Box sx={{flexGrow: 1, margin: 4}}>
-                <Grid container spacing={{xs: 1, md: 12, lg: 12}} columns={{xs: 1, sm: 6, md: 12, lg: 9}}>
+            <Box  sx={{ maxWidth: '1300px', flexGrow: 1, margin: 'auto'}}>
+                <Grid container spacing={{xs: 1, sm: 2, md: 10, lg: 4, }} columns={{xs: 2, sm: 2, md: 10, lg: 12}}>
                     {
                         products ? (
                             products.map((item, index) => (
-                                    <Grid sx={{display: 'flex', justifyContent: 'center'}} item xs={1} sm={3} md={6} lg={2}  key={index}>
+                                    <Grid  item xs={1} sm={1} md={3} lg={3}  key={index}>
                                         <ProductCard item={item} key={index}/>
                                     </Grid>
                             ))
