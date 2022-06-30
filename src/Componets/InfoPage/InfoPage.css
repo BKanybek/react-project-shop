@@ -1,15 +1,28 @@
 
-
+.container-wrapper{
+    position: relative; 
+    margin: 3px;
+    height: 50vh;
+    width: 100%;
+}
 .img{
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;  
+    object-fit: cover; 
+    z-index: 2;
 }
-.container-wrapper{
-    margin: 3px;
-    height: 40vh;
-    position: relative; 
+
+.wrapper-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: black;
+    opacity: 0.3;
+    z-index: 3;
 }
+
+
 
 .info{
     position: absolute;
@@ -21,12 +34,14 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 4;
 }
 
 .title{
+    font-weight: 600;
     color: white;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .button{
@@ -36,7 +51,14 @@
     border: 1px solid #fff;
     color: #fff;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
+    outline: none;
 }
+
+.button:hover{
+    color: white
+}
+
+
 

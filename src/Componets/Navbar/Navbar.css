@@ -1,0 +1,23 @@
+.navbar-container{
+    height: 60px;
+}
+
+.navbar-wrapper{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side{
+    flex: 1;
+}
+
+.center{
+    flex: 1;
+}
+
+.right-side{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
