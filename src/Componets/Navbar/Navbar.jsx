@@ -15,6 +15,7 @@ import { FaRegHeart} from "react-icons/fa";
 import Logo from "../Images/Logo/03.png.png"; 
 import { styled, alpha } from '@mui/material/styles';
 import { InputBase } from '@mui/material';
+import Search from '../Search/Search';
 
 
 export default function NavBar() {
@@ -181,7 +182,7 @@ export default function NavBar() {
                 </Form> 
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
-      <Nav className="me-auto my-2 my-lg-0" navbarScroll>
+      <Nav style={{display: 'flex', justifyContent: 'space-between'}} className="me-auto my-2 my-lg-0" navbarScroll>
         <NavDropdown title={<span style={{fontWeight: '800', color: 'black', fontSize: '18px'}}>Каталог</span>} id="navbarScrollingDropdown">
       <div style={{width: 'auto', display: 'flex', flexDirection: 'column'}}>
           <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/list">Посмотреть все</Link>
@@ -200,8 +201,9 @@ export default function NavBar() {
       </Nav>
       
       <Box/>
-      
+      <Search/>
           <Box sx={{ display: { md: 'd-flex' } }}>
+     
             <Link style={{marginRight: '20px'}} to='/cart'>
                 <Badge badgeContent={cartLength}>
                   <AiOutlineShopping size='1.5em' color='black' fontSize='20px'/>
