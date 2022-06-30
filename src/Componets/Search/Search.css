@@ -3,20 +3,26 @@
     justify-content: center;
 }
 
-.searchInput{
-    position: relative;
+.search-wrapper{
     display: flex;
     align-items: center;
 }
 
-.crossIcon{
+.search-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.cross-icon{
     position: absolute;
     top: 1;
     right: 0;
     margin-right: 10px;
 }
 
-.searchIcon{
+.search-icon{
     padding: 0 20px;
     display: flex;
     position: relative;
@@ -25,7 +31,11 @@
     width: 60px;
 }
 
-.inputSearch{
+.input-search{
     padding: 5px 8px;
+}
+
+.search-input:hover{
+    display: block;
 }
 
