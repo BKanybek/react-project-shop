@@ -10,8 +10,7 @@ const InfoPageItem = ({item}) => {
             <div className='info'>
                  <h1 className='title'>{item.title}</h1>
                 <a href='/' className='button'> Подробнее</a>
-            </div>
-            
+            </div>    
         </div>
     );
 };
