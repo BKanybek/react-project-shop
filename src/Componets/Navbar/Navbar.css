@@ -1,0 +1,11 @@
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.container-test{
+    background: black;
+}

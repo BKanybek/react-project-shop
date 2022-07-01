@@ -6,25 +6,19 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Button, Box } from '@mui/material';
 import { productContext } from '../../Context/ProductContext';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu } from '@mui/icons-material';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Form, FormControl } from 'react-bootstrap';
 import { AiOutlineShopping, AiOutlineUser } from "react-icons/ai";
 import { FaRegHeart} from "react-icons/fa";
-import Logo from "../Images/Logo/03.png.png"; 
-import { styled, alpha } from '@mui/material/styles';
-import { InputBase } from '@mui/material';
+import Logo from "../Images/Logo/03.png.png";  
+import Search from '../Search/Search';
+import './Navbar.css'
 
 
 export default function NavBar() {
-    const { getProducts, useAuth, logout, cartLength, getCartLength, getStarLength, starLength } = React.useContext(productContext)
-    const search = new URLSearchParams(window.location.search)
-    const [searchParams, setSearchParams] = useSearchParams()
-    const [limit, setLimit] = React.useState(10)
-    const[ searchVal, setSearchVal ] = React.useState(searchParams.get('q') ? searchParams.get('q') : '')
-    const [page, setPage] = React.useState(searchParams.get('_page') ? searchParams.get("_page") : 1)
-    const navigate = useNavigate()
+    const { useAuth, logout, cartLength, getCartLength, getStarLength, starLength } = React.useContext(productContext)
+
     const currentUser = useAuth()
 
     async function handleLogOut(){
@@ -35,19 +29,6 @@ export default function NavBar() {
       }
     }
 
-
-
-    const handleValue = (e) => {
-      const search = new URLSearchParams(window.location.search)
-      search.set('q', e.target.value)
-      setSearchVal(e.target.value)
-      setSearchParams({
-          'q': searchVal,
-          '_limit': '',
-          '_page': ''
-      })
-      getProducts()
-    }
 
 
     React.useEffect(() => {
@@ -167,21 +148,12 @@ export default function NavBar() {
   return (
     <div>
     <Navbar style={{maxWidth: '1360px', margin: 'auto', paddingTop: '20px'}} className='navbar' expand="lg">
-      <Container style={{margin: 'auto'}}>
+      <Container className='container-test' style={{margin: 'auto'}}>
       <img style={{width: '100px', height: '40px', paddingRight: '10px'}} src={Logo} alt="" />
-      <Form className="d-flex justify-content-center">
-                    <FormControl
-                        type="search"
-                        placeholder="Search"
-                        className="me-2"
-                        aria-label="Search"
-                        onChange={handleValue}
-                        style={{width: 'auto'}}
-                    />
-                </Form> 
       <Navbar.Toggle aria-controls="navbarScroll" />
+
       <Navbar.Collapse id="navbarScroll">
-      <Nav className="me-auto my-2 my-lg-0" navbarScroll>
+      <Nav style={{display: 'flex', justifyContent: 'space-between'}} className="me-auto my-2 my-lg-0" navbarScroll>
         <NavDropdown title={<span style={{fontWeight: '800', color: 'black', fontSize: '18px'}}>Каталог</span>} id="navbarScrollingDropdown">
       <div style={{width: 'auto', display: 'flex', flexDirection: 'column'}}>
           <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/list">Посмотреть все</Link>
@@ -200,26 +172,28 @@ export default function NavBar() {
       </Nav>
       
       <Box/>
-      
-          <Box sx={{ display: { md: 'd-flex' } }}>
-            <Link style={{marginRight: '20px'}} to='/cart'>
-                <Badge badgeContent={cartLength}>
-                  <AiOutlineShopping size='1.5em' color='black' fontSize='20px'/>
-                </Badge> 
-            </Link>
-            <Link style={{marginRight: '20px'}} to='/favorite'>
-                <Badge badgeContent={starLength}>
-                  <FaRegHeart size='1.2em' color='black' fontSize='20px'/>
-                </Badge>
-            </Link>
-            <Link style={{marginRight: '20px'}} to='/'>
-                <AiOutlineUser size='1.2em' color='black' fontSize='20px'/>
-            </Link>
-            </Box>
+
             {/* {renderMobileMenu} 
             {renderMenu}    */}
 </Navbar.Collapse>
 
+          <Box sx={{ display: { md: 'd-flex' } }}>
+          <Search/>
+            <Link style={{marginRight: '20px'}} to='/cart'>
+              <Badge badgeContent={cartLength}>
+               <AiOutlineShopping size='1.5em' color='black' fontSize='20px'/>
+               </Badge> 
+            </Link>
+            <Link style={{marginRight: '20px'}} to='/favorite'>
+              <Badge badgeContent={starLength}>
+                <FaRegHeart size='1.2em' color='black' fontSize='20px'/>
+               </Badge>
+            </Link>
+            <Link style={{marginRight: '20px'}} to='/'>
+               <AiOutlineUser size='1.2em' color='black' fontSize='20px'/>
+            </Link>
+         </Box>
+         <div className='test'>TEST</div>
 </Container>
 </Navbar>
 </div>
