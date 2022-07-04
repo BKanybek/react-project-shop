@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Carousel from 'react-elastic-carousel';
 // import Item from './Item';
 import './Slider.css';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { productContext } from '../../../Context/ProductContext';
 
@@ -17,19 +17,7 @@ const breakPoints = [
 
 
 const Slider = () => {
-    const { products, getProducts } = useContext(productContext)
-    const [searchParams, setSearchParams] = useSearchParams()
-    const [limit, setLimit] = useState()
-    const [page, setPage] = useState(searchParams.get('_page') ? searchParams.get("_page") : 1)
-
-
-    useEffect(() =>{
-        setSearchParams({
-            '_limit': limit,
-            "_page": page
-        })
-    }, [limit, page])
-
+    const { products, getProducts } = useContext(productContext)  
 
     useEffect(() => {
         getProducts()
@@ -38,12 +26,12 @@ const Slider = () => {
     
     return (
       <>
-            <div className='Slider' >
+            <div className='slider' >
               <Carousel style={{ maxWidth: '1398px', margin: 'auto'}} breakPoints={breakPoints} >
                   {
                     products ? (
                       products.map((item, index) => (
-                          <Card style={{}} key={index}>
+                          <Card style={{boxShadow: 'none'}} key={index}>
                             <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}> 
                               <CardMedia
                                 sx={{width: '166px', height: '220px'}}
@@ -51,13 +39,13 @@ const Slider = () => {
                                 image={item.image}
                                 alt={item.name}
                               />
-                              <CardContent>
-                                <Typography variant="h6" component="div">
+                              <CardContent className='item-name'>
+                                <Typography style={{fontSize: '13px'}}>
                                   {item.name}
                                 </Typography>
                               </CardContent>
-                              <CardContent>
-                                <Typography >
+                              <CardContent className='item-price'>
+                                <Typography style={{fontWeight: '700'}}>
                                     {item.price} сом
                                 </Typography>
                               </CardContent>

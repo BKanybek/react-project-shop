@@ -146,56 +146,50 @@ export default function NavBar() {
 
   
   return (
-    <div>
-    <Navbar style={{maxWidth: '1360px', margin: 'auto', paddingTop: '20px'}} className='navbar' expand="lg">
-      <Container className='container-test' style={{margin: 'auto'}}>
+    <div className='navbar-wrapper'>
+    <Navbar style={{maxWidth: '1360px', margin: 'auto', paddingTop: '20px'}} className='navbar' expand="md">
+    <Container className='container-test' style={{margin: 'auto'}}>
       <img style={{width: '100px', height: '40px', paddingRight: '10px'}} src={Logo} alt="" />
       <Navbar.Toggle aria-controls="navbarScroll" />
-
       <Navbar.Collapse id="navbarScroll">
-      <Nav style={{display: 'flex', justifyContent: 'space-between'}} className="me-auto my-2 my-lg-0" navbarScroll>
-        <NavDropdown title={<span style={{fontWeight: '800', color: 'black', fontSize: '18px'}}>Каталог</span>} id="navbarScrollingDropdown">
-      <div style={{width: 'auto', display: 'flex', flexDirection: 'column'}}>
-          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/list">Посмотреть все</Link>
-          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Кожа</Link>
-          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Джинсы</Link>
-          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Топы и Рубашки</Link>
-          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Юбки и Платья</Link>
-          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Брюки и шорты</Link>
-          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Деним</Link>
-          <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Верхняя одежда</Link>
-      </div>  
-      </NavDropdown>
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', fontSize: '18px'}} to="/">О брендах</Link>
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black',  fontSize: '18px'}} to="/">Таблица размеров</Link>
-      <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', fontSize: '18px'}}  to="/">Контакты</Link>
-      </Nav>
-      
-      <Box/>
-
-            {/* {renderMobileMenu} 
+        <Nav style={{display: 'flex', justifyContent: 'space-between'}} className="me-auto my-2 my-lg-0" navbarScroll>
+          <NavDropdown title={<span style={{fontWeight: '800', color: 'black', fontSize: '18px'}}>Каталог</span>} id="navbarScrollingDropdown">
+            <div style={{width: 'auto', display: 'flex', flexDirection: 'column'}}>
+              <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/list">Посмотреть все</Link>
+              <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Кожа</Link>
+              <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Джинсы</Link>
+              <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Топы и Рубашки</Link>
+              <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/">Юбки и Платья</Link>
+              <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Брюки и шорты</Link>
+              <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Деним</Link>
+              <Link style={{textDecoration: 'none', fontWeight: '400', color: 'black', padding: '0.25rem 1rem'}}  to="/add">Верхняя одежда</Link>
+            </div>  
+          </NavDropdown>
+          <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', fontSize: '18px'}} to="/">О брендах</Link>
+          <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black',  fontSize: '18px'}} to="/">Таблица размеров</Link>
+          <Link style={{display: 'flex', alignItems: 'center',textDecoration: 'none', fontWeight: '800', color: 'black', fontSize: '18px'}}  to="/">Контакты</Link>
+        </Nav>     
+          {/* {renderMobileMenu} 
             {renderMenu}    */}
-</Navbar.Collapse>
-
-          <Box sx={{ display: { md: 'd-flex' } }}>
-          <Search/>
-            <Link style={{marginRight: '20px'}} to='/cart'>
-              <Badge badgeContent={cartLength}>
-               <AiOutlineShopping size='1.5em' color='black' fontSize='20px'/>
-               </Badge> 
-            </Link>
-            <Link style={{marginRight: '20px'}} to='/favorite'>
-              <Badge badgeContent={starLength}>
-                <FaRegHeart size='1.2em' color='black' fontSize='20px'/>
-               </Badge>
-            </Link>
-            <Link style={{marginRight: '20px'}} to='/'>
-               <AiOutlineUser size='1.2em' color='black' fontSize='20px'/>
-            </Link>
-         </Box>
-         <div className='test'>TEST</div>
-</Container>
-</Navbar>
-</div>
+        </Navbar.Collapse>
+      <Box sx={{ display: { md: 'd-flex' } }}>
+        <Search/>
+          <Link style={{marginRight: '20px'}} to='/cart'>
+            <Badge badgeContent={cartLength}>
+              <AiOutlineShopping size='1.5em' color='black' fontSize='20px'/>
+            </Badge> 
+          </Link>
+          <Link style={{marginRight: '20px'}} to='/favorite'>
+            <Badge badgeContent={starLength}>
+              <FaRegHeart size='1.2em' color='black' fontSize='20px'/>
+            </Badge>
+          </Link>
+          <Link style={{marginRight: '20px'}} to='/'>
+            <AiOutlineUser size='1.2em' color='black' fontSize='20px'/>
+          </Link>
+        </Box>
+    </Container>
+    </Navbar>
+  </div>
   );
 }

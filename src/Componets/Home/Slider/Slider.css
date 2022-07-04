@@ -1,3 +1,7 @@
+.slider{
+  height: 300px;
+}
+
 .rec.rec-arrow {
     width: 25px;
     height: 25px;
@@ -46,4 +50,13 @@
 .MuiCardContent-root{
     padding: 0px;
 }
+
+.item-name{
+  padding: 13px 0 5px 0 !important;
+}
+
+.item-price{
+  padding: 6px 0 !important;
+}
+
 
