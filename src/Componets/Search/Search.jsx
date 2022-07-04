@@ -21,27 +21,6 @@ const Search = () => {
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-        // <div className='search'>
-        //     <div className='search-wrapper'>
-        //         <div className='searchInput'>
-        //             <input className='inputSearch' type="text" placeholder='Поиск'/>
-        //             <div className='crossIcon'>
-        //                 <CloseIcon />
-        //             </div>
-        //         </div>
-        //     </div>
-        //     <div className='searchIcon'>
-        //         <SearchIcon style={{fontSize: '30px'}}/>
-        //     </div>
-        //     <div> 
-        //     </div>
-        // </div>
     );
 };
 

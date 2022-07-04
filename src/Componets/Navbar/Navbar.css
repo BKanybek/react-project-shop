@@ -6,4 +6,87 @@
     box-shadow: none !important;
 }
 
+.link-wrapper {
+   display: flex;
+   align-items: flex-start;
+}
+
+.link-wrapper a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 8px 10px;
+}
+
+.link-wrapper a:hover {
+    color: black;
+}
+
+.dropdown-menu{
+    width: 200px;
+}
+
+.navbar-nav{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 8px;
+}
+
+.navbar-nav a:hover {
+    color: black;
+}
+
+
+.img-logo{
+    width: 120px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.icon-box{
+    display: flex;
+    align-items: center;
+}
+
+.icon-box a{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: black;
+}
+
+@media all and (max-width: 991px) {
+    .navbar-nav{
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    .dropdown-menu{
+        width: 200px;
+        border: none;
+    }
+    
+}
+
+@media all and (max-width: 767px) {
+    .navbar-nav{
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    .navbar-nav a{   
+        font-size: 20px;
+        margin: 0;
+    }
+}
 
