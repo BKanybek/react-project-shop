@@ -4,22 +4,32 @@ import { Link } from 'react-router-dom';
 import Logo from "../Images/Logo/new-logo.png";
 import Search from '../Search/Search';
 import { AiOutlineShopping, AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
+import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
+import "./Navbar.css"
+import { useState } from 'react';
 
 export default function NavBar() {
+  const [Mobile, setMobile] = useState(true)
+
+
   return(
     <>
-      <div className='navbar'>
+      <div className='navbar-wrapper'>
         <div className='logo'>
           <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className='nav-links'>
+        <ul className={Mobile? "nav-links-mobile" : "nav-links"} onClick={() => setMobile(false)}>
           <li>
-            <Link to="/">Каталог</Link>
+            <Link to="/"><a>Каталог</a>
+
+            </Link>
             <Link to="/">О брендe</Link>
             <Link to="/">Таблица размеров</Link>
             <Link to="/">Контакты</Link>
           </li>
         </ul>
+        
         <div className='icons'>
             <Search/>
             <Link to='/cart'>
@@ -36,6 +46,10 @@ export default function NavBar() {
              <AiOutlineUser/>
             </Link>
         </div>
+        <button className='mobile-menu-icon' onClick={() => setMobile(!Mobile)}>
+          {Mobile ? <ImCross/> : <FaBars/>}
+          
+        </button>
       </div>
     </>
   )
