@@ -10,7 +10,7 @@ import "./Navbar.css"
 import { useState } from 'react';
 
 export default function NavBar() {
-  const [Mobile, setMobile] = useState(true)
+  const [Mobile, setMobile] = useState(false)
 
 
   return(
@@ -19,7 +19,7 @@ export default function NavBar() {
         <div className='logo'>
           <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className={Mobile? "nav-links-mobile" : "nav-links"} onClick={() => setMobile(false)}>
+        <ul className={Mobile? "nav-links-mobile" : "nav-links"} onClick={() => setMobile(true)}>
           <li>
             <Link to="/"><a>Каталог</a>
 
@@ -29,9 +29,11 @@ export default function NavBar() {
             <Link to="/">Контакты</Link>
           </li>
         </ul>
-        
+        <div className='search-wrapper'>
+          <Search/>
+        </div>
         <div className='icons'>
-            <Search/>
+            
             <Link to='/cart'>
              <Badge>
                <AiOutlineShopping/>

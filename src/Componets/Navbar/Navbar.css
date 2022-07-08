@@ -46,7 +46,7 @@
 .icons{
     display: flex;
     justify-content: center;
-    order: 3;
+    order: 4;
 }
 
 .icons a{
@@ -69,8 +69,26 @@
     display: none;
 }
 
+.search-wrapper{
+    order: 3;
+}
+
+
+@media (max-width: 1024px){
+    .navbar-wrapper{
+        max-width: 950px;
+        margin: auto;
+    }
+    .nav-links li a{
+       padding: 0 5px;
+    }
+}
 
 @media all and (max-width: 900px) {
+    .navbar-wrapper{
+        padding: 0 20px;
+    }
+    
     .nav-links{
         display: none;
     }
@@ -93,7 +111,7 @@
     .mobile-menu-icon{
         display: block;
         position: absolute;
-        top: 40px;
+        top: 33px;
         left: 20px;
     }
     .logo{
@@ -101,7 +119,34 @@
         padding-bottom: 5px;
         display: flex;
         justify-content: center;
+        order: 2;
         
+    }
+    
+    .search-wrapper{
+        margin-left: 25px;
+        order: 1;
+    }
+
+    .icons{
+        order: 3;
+    }
+    
+}
+
+
+@media all and (max-width: 425px){
+
+    .icons a{
+        padding: 0 3px;
+        font-size: 25px;
+    }
+    .icons a:last-child{
+        padding: 0;
+    }
+
+    .search-wrapper{
+        padding-left: 0;
     }
 }
 
