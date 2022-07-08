@@ -1,33 +1,34 @@
 import { Badge } from '@mui/material';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from "../Images/Logo/new-logo.png";
+// import Logo from "../Images/Logo/new-logo.png";
 import Search from '../Search/Search';
 import { AiOutlineShopping, AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
+import "./Navbar.css"
 
 export default function NavBar() {
   return(
     <>
-      <div className='navbar'>
-        <div className='logo'>
-          <img className='img-logo' src={Logo} alt="" />
+      <div className='navbar-wrapper'>
+        <div className='logo-wrapper'>
+          {/* <img className='img-logo' src={Logo} alt="" /> */}
         </div>
         <ul className='nav-links'>
-          <li>
+          <li className='nav-links-info'>
             <Link to="/">Каталог</Link>
             <Link to="/">О брендe</Link>
             <Link to="/">Таблица размеров</Link>
             <Link to="/">Контакты</Link>
           </li>
         </ul>
-        <div className='icons'>
+        <div className='icons-wrapper'>
             <Search/>
-            <Link to='/cart'>
+            <Link to='/'>
              <Badge>
                <AiOutlineShopping/>
              </Badge> 
             </Link>
-            <Link to='/favorite'>
+            <Link to='/'>
              <Badge>
                <AiOutlineHeart/>
              </Badge>
