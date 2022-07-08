@@ -1,29 +1,49 @@
 import { Badge } from '@mui/material';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-// import Logo from "../Images/Logo/new-logo.png";
+import Logo from "../Images/Logo/new-logo.png";
 import Search from '../Search/Search';
 import { AiOutlineShopping, AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
+import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 import "./Navbar.css"
+import { useState } from 'react';
 
 export default function NavBar() {
+  const [Mobile, setMobile] = useState(false)
+
+
   return(
     <>
       <div className='navbar-wrapper'>
-        <div className='logo-wrapper'>
-          {/* <img className='img-logo' src={Logo} alt="" /> */}
+        <div className='logo'>
+          <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className='nav-links'>
-          <li className='nav-links-info'>
-            <Link to="/">Каталог</Link>
-            <Link to="/">О брендe</Link>
+        <ul className={Mobile ? "nav-links-mobile" : "nav-links"}>
+          <li>
+            <Link to="/">Каталог
+              {/* <div className='links-dropdown'>
+                <Link to="/list">Посмотреть все</Link>
+                <Link to="/add">Кожа</Link>
+                <Link to="/">Джинсы</Link>
+                <Link to="/add">Топы и Рубашки</Link>
+                <Link to="/">Юбки и Платья</Link>
+                <Link to="/add">Брюки и шорты</Link>
+                <Link to="/add">Деним</Link>
+                <Link to="/add">Верхняя одежда</Link>
+              </div> */}
+            </Link>
+            <Link to="/list">О брендe</Link>
             <Link to="/">Таблица размеров</Link>
             <Link to="/">Контакты</Link>
           </li>
         </ul>
-        <div className='icons-wrapper'>
-            <Search/>
-            <Link to='/'>
+        <div className='search-wrapper'>
+          <Search/>
+        </div>
+        <div className='icons'>
+            
+            <Link to='/cart'>
              <Badge>
                <AiOutlineShopping/>
              </Badge> 
@@ -37,6 +57,10 @@ export default function NavBar() {
              <AiOutlineUser/>
             </Link>
         </div>
+        <button className='mobile-menu-icon' onClick={() => setMobile(!Mobile)}>
+          {Mobile ? <ImCross/> : <FaBars/>}
+          
+        </button>
       </div>
     </>
   )

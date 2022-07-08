@@ -36,3 +36,8 @@
 }
 
 
+@media all and (max-width: 425px){
+    .css-i4bv87-MuiSvgIcon-root{
+        font-size: 25px;
+    }
+}
