@@ -24,7 +24,6 @@
 }
 
 
-
 .nav-links li a{
     text-decoration: none;
     color: black;
@@ -33,15 +32,6 @@
     padding: 0 20px;
 }
 
-.nav-links-mobile li a{
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: black;
-    font-size: 26px;
-    font-weight: 500;
-    padding: 20px 0;
-}
 
 .icons{
     display: flex;
@@ -74,6 +64,27 @@
 }
 
 
+/* .links-dropdown{
+    display: none;
+    position: absolute;
+    width: 250px;
+    background-color: white;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    z-index: 7;
+    padding: 5px 5px;
+    box-shadow:  0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    margin-left: 18px ;
+    margin-top: 15px;
+} */
+
+.links-dropdown a{
+    padding: 10px 0;
+}
+
+
+
 @media (max-width: 1024px){
     .navbar-wrapper{
         max-width: 950px;
@@ -84,28 +95,59 @@
     }
 }
 
+@media(width: 901px){
+    .nav-links{
+        display: flex;
+        justify-content: flex-start;
+        flex-grow: 1;
+        list-style: none;
+        padding: 0 0 0 20px;
+        margin: 0;
+        order: 2;
+    }
+    .nav-links-mobile li{
+        display: none;
+    }
+}
+
 @media all and (max-width: 900px) {
     .navbar-wrapper{
         padding: 0 20px;
     }
     
     .nav-links{
-        display: none;
-    }
-    .nav-links-mobile{
         position: absolute;
         display: block;
-        list-style: none;
         box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
         left: 0;
         top: 10%;
         width: 100%;
         background-color: white;
         transition: all 1s ease-in-out;
-        z-index: 4;
+        z-index: 5;
         padding: 40px 20px 0 20px;
         height: 100%;
+        transform: translateX(-100%);
+        transition: all .45s;
     }
+
+    .nav-links.open{
+        transform: translateX(0);
+    }
+
+    .nav-links li a::before{
+        background: transparent;
+    }    
+
+    .nav-links li a{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: black;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 14px 0px;
+    }    
 
 
     .mobile-menu-icon{
@@ -131,6 +173,10 @@
     .icons{
         order: 3;
     }
+    
+}
+
+@media all and (max-width: 900px) {
     
 }
 

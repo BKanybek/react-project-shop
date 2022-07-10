@@ -19,14 +19,23 @@ export default function NavBar() {
         <div className='logo'>
           <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className={Mobile? "nav-links-mobile" : "nav-links"} onClick={() => setMobile(true)}>
-          <li>
-            <Link to="/"><a>Каталог</a>
-
+        <ul className={`nav-links ${Mobile && "open"}`}>
+          <li onClick={() => setMobile(!Mobile)}>
+            <Link to="/">Каталог
+              {/* <div className='links-dropdown'>
+                <Link to="/list">Посмотреть все</Link>
+                <Link to="/add">Кожа</Link>
+                <Link to="/">Джинсы</Link>
+                <Link to="/add">Топы и Рубашки</Link>
+                <Link to="/">Юбки и Платья</Link>
+                <Link to="/add">Брюки и шорты</Link>
+                <Link to="/add">Деним</Link>
+                <Link to="/add">Верхняя одежда</Link>
+              </div> */}
             </Link>
-            <Link to="/">О брендe</Link>
+            <Link to="/list" >О брендe</Link>
             <Link to="/">Таблица размеров</Link>
-            <Link to="/">Контакты</Link>
+            <Link to="/add">Контакты</Link>
           </li>
         </ul>
         <div className='search-wrapper'>
@@ -39,7 +48,7 @@ export default function NavBar() {
                <AiOutlineShopping/>
              </Badge> 
             </Link>
-            <Link to='/favorite'>
+            <Link to='/'>
              <Badge>
                <AiOutlineHeart/>
              </Badge>
