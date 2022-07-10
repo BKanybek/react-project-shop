@@ -19,8 +19,8 @@ export default function NavBar() {
         <div className='logo'>
           <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className={Mobile ? "nav-links-mobile" : "nav-links"}>
-          <li>
+        <ul className={`nav-links ${Mobile && "open"}`}>
+          <li onClick={() => setMobile(!Mobile)}>
             <Link to="/">Каталог
               {/* <div className='links-dropdown'>
                 <Link to="/list">Посмотреть все</Link>
@@ -33,9 +33,9 @@ export default function NavBar() {
                 <Link to="/add">Верхняя одежда</Link>
               </div> */}
             </Link>
-            <Link to="/list">О брендe</Link>
+            <Link to="/list" >О брендe</Link>
             <Link to="/">Таблица размеров</Link>
-            <Link to="/">Контакты</Link>
+            <Link to="/add">Контакты</Link>
           </li>
         </ul>
         <div className='search-wrapper'>
