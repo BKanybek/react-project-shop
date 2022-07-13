@@ -1,4 +1,4 @@
-import { Badge } from '@mui/material';
+import { Badge, linkClasses } from '@mui/material';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../Images/Logo/new-logo.png";
@@ -6,11 +6,13 @@ import Search from '../Search/Search';
 import { AiOutlineShopping, AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import "./Navbar.css"
 import { useState } from 'react';
+import "./Navbar.css"
 
 export default function NavBar() {
   const [Mobile, setMobile] = useState(false)
+
+
 
 
   return(
@@ -19,8 +21,8 @@ export default function NavBar() {
         <div className='logo'>
           <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className={`nav-links ${Mobile && "open"}`}>
-          <li onClick={() => setMobile(!Mobile)}>
+        <ul className={`nav-links ${Mobile && "open"}`} onClick={() => setMobile(!true)}>
+          <li>
             <Link to="/">Каталог
               {/* <div className='links-dropdown'>
                 <Link to="/list">Посмотреть все</Link>
