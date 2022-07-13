@@ -1,4 +1,4 @@
-import { Badge } from '@mui/material';
+import { Badge, linkClasses } from '@mui/material';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../Images/Logo/new-logo.png";
@@ -12,13 +12,16 @@ import "./Navbar.css"
 export default function NavBar() {
   const [Mobile, setMobile] = useState(false)
 
+
+
+
   return(
     <>
       <div className='navbar-wrapper'>
         <div className='logo'>
           <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className={`nav-links ${Mobile && "open"}`} onClick={() => setMobile(!Mobile)}>
+        <ul className={`nav-links ${Mobile && "open"}`} onClick={() => setMobile(!true)}>
           <li>
             <Link to="/">Каталог
               {/* <div className='links-dropdown'>
