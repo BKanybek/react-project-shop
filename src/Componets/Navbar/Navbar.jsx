@@ -10,12 +10,13 @@ import { useState } from 'react';
 import "./Navbar.css"
 
 export default function NavBar() {
-  const [Mobile, setMobile] = useState(false)
+  const [Mobile, setMobile] = useState(true)
 
   const handleClick = () => {
     setMobile(!Mobile)
     const body = document.getElementById("body")
     body.classList.toggle("fixed_body")
+    console.log(Mobile, 'test')
   }
 
   
@@ -27,7 +28,7 @@ export default function NavBar() {
         <div className='logo'>
           <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className={`nav-links ${!Mobile && "open"}`} onClick={() => setMobile(true)}>
+        <ul className={`nav-links ${!Mobile && "open"}`} onClick={handleClick}>
           <li>
             <Link to="/">Каталог
               {/* <div className='links-dropdown'>
