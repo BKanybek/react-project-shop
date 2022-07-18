@@ -7,8 +7,8 @@ import './InfoPageItem.css'
 const InfoPage = () => {
     return (
         <div className='wrapper'>
-         {infoPageData.map(item =>(
-            <InfoPageItem item={item}/>
+         {infoPageData.map ((item, index) =>(
+            <InfoPageItem key={index} item={item}/>
             ))}
         </div>
     );
