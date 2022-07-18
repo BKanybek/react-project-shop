@@ -1,3 +1,9 @@
+/* const handleClick = () => {
+    const body = document.getElementById("body")
+    setMobile(!Mobile)
+    body.classList.toggle("fixed_body")
+  } */
+
 .navbar-wrapper{
     display: flex;
     justify-content: space-between;
@@ -84,6 +90,12 @@
 }
 
 
+.fixed_body{
+    overflow: hidden;
+    block-size: 100%;
+  }
+
+
 
 @media (max-width: 1024px){
     .navbar-wrapper{
@@ -110,6 +122,8 @@
     }
 }
 
+
+
 @media all and (max-width: 900px) {
 
     html.noscroll {
@@ -119,7 +133,7 @@
     body.noscroll {
         overflow: visible;
         height: 100%;
-    }
+    }   
 
     .navbar-wrapper{
         padding: 0 20px;

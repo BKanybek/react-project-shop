@@ -12,7 +12,13 @@ import "./Navbar.css"
 export default function NavBar() {
   const [Mobile, setMobile] = useState(false)
 
+  const handleClick = () => {
+    setMobile(!Mobile)
+    const body = document.getElementById("body")
+    body.classList.toggle("fixed_body")
+  }
 
+  
 
 
   return(
@@ -21,7 +27,7 @@ export default function NavBar() {
         <div className='logo'>
           <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className={`nav-links ${Mobile && "open"}`} onClick={() => setMobile(!true)}>
+        <ul className={`nav-links ${!Mobile && "open"}`} onClick={() => setMobile(true)}>
           <li>
             <Link to="/">Каталог
               {/* <div className='links-dropdown'>
@@ -59,8 +65,8 @@ export default function NavBar() {
              <AiOutlineUser/>
             </Link>
         </div>
-        <button className='mobile-menu-icon' onClick={() => setMobile(!Mobile)}>
-          {Mobile ? <ImCross/> : <FaBars/>}
+        <button className='mobile-menu-icon' onClick={handleClick}>
+          {!Mobile ? <ImCross/> : <FaBars/>}
           
         </button>
       </div>
