@@ -15,9 +15,17 @@
     display: none;
 }
 
+.search-input-active{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 10;
+}
+
 .cross-icon{
     position: absolute;
-    top: 1;
+    top: 10;
     right: 0;
     margin-right: 10px;
 }
@@ -36,8 +44,8 @@
 }
 
 
-@media all and (max-width: 425px){
-    .css-i4bv87-MuiSvgIcon-root{
-        font-size: 25px;
+@media all and (max-width: 425px){  
+    .search-wrapper{
+        margin: 0;
     }
 }
