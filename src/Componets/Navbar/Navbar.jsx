@@ -1,4 +1,4 @@
-import { Badge, linkClasses } from '@mui/material';
+import { Badge } from '@mui/material';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../Images/Logo/new-logo.png";
@@ -8,17 +8,26 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { useState } from 'react';
 import "./Navbar.css"
+import { useEffect } from 'react';
 
 export default function NavBar() {
   const [Mobile, setMobile] = useState(true)
 
   const handleClick = () => {
     setMobile(!Mobile)
+<<<<<<< HEAD
     const body = document.getElementById("body")
     body.classList.toggle("fixed_body")
     console.log(Mobile, 'test')
+=======
+>>>>>>> 6b7ca845e11d1921bbbc157f7037004ee275fd80
   }
 
+
+  useEffect(() =>{
+    if (!Mobile) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'visible';
+  }, [!Mobile])
   
 
 
@@ -47,7 +56,7 @@ export default function NavBar() {
             <Link to="/add">Контакты</Link>
           </li>
         </ul>
-        <div className='search-wrapper'>
+        <div className='nav-search-wrapper'>
           <Search/>
         </div>
         <div className='icons'>

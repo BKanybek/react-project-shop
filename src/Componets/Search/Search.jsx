@@ -5,19 +5,20 @@ import './Search.css'
 import { useState } from 'react';
 
 const Search = () => {
+    const [show, setShow] = useState(true)
+    console.log(show)
 
     return (
-
         <div className='search'>
             <div className='search-wrapper'>
-                <div className='search-input'>
+                <div className={`search-input ${!show && 'search-input-active'}`}>
                     <input className='input-search' type="text" placeholder="Поиск"/>
                     <div className='cross-icon'>
                         <CloseIcon/>
                     </div>
                 </div>
                 <div className='search-icon'>
-                    <SearchIcon style={{fontSize: '30px'}}/>
+                    <SearchIcon style={{fontSize: '30px'}} onClick={() => setShow(!show)}/>
                 </div>
             </div>
         </div>
