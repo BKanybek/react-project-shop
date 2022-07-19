@@ -13,7 +13,7 @@ const Search = () => {
             <div className='search-wrapper'>
                 <div className={`search-input ${!show && 'search-input-active'}`}>
                     <input className='input-search' type="text" placeholder="Поиск"/>
-                    <div className='cross-icon'>
+                    <div className='cross-icon' onClick={() => setShow(!show)}>
                         <CloseIcon/>
                     </div>
                 </div>

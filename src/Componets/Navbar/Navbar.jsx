@@ -31,8 +31,8 @@ export default function NavBar() {
         <div className='logo'>
           <img className='img-logo' src={Logo} alt="" />
         </div>
-        <ul className={`nav-links ${!Mobile && "open"}`} onClick={() => setMobile(true)}>
-          <li>
+        <ul className={`nav-links ${!Mobile && "open"}`}>
+          <li onClick={handleClick}>
             <Link to="/">Каталог
               {/* <div className='links-dropdown'>
                 <Link to="/list">Посмотреть все</Link>

@@ -150,6 +150,10 @@
         background: transparent;
     }    
 
+    .nav-links li a:hover{
+        opacity: 0.5;
+    }  
+
     .nav-links li a{
         display: flex;
         flex-direction: column;
@@ -219,7 +223,7 @@
         /* left: 20px; */
     }
     .nav-links{
-        top: 9%;
+        top: 7%;
     }
 }
 
