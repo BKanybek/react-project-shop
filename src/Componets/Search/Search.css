@@ -19,7 +19,7 @@
     display: block;
     position: absolute;
     top: 30px;
-    right: 287px;
+    right: 550px;
     z-index: 10;
     
 }
@@ -57,7 +57,7 @@
 
 @media all and (max-width: 900px){
     .search-input-active{
-        top: 32px;
+        top: 29px;
         right: 20px;
     }
     .input-search{
@@ -68,8 +68,8 @@
 
 @media all and (max-width: 425px){  
     .search-input-active{
-        top: 18px;
-        /* right: 20px; */
+        top: 16px;
+        right: 7px;
     }
 
     .search-wrapper{
@@ -77,6 +77,13 @@
     }
 
     .input-search{
-        width: 200px;
+        width: 220px;
     }
+}
+
+@media all and (max-width: 320px){
+    .search-input-active{
+        top: 13px;
+    }
+
 }

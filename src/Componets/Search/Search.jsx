@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 const Search = () => {
     const [show, setShow] = useState(true)
-    console.log(show)
 
     return (
         <div className='search'>
