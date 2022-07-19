@@ -1,17 +1,17 @@
 export const infoPageData = [
     {
         id: 1,
-        img: "https://vplate.ru/images/article/orig/2017/07/sumki-cromia-77.jpg",
+        img: "https://amourrr.com/upload/iblock/73d/jakdkj25ln3jshlm4x7he7mi1uduuo21.jpg",
         title: "Cмотреть все модели", 
     },
     {
         id: 2,
-        img: "https://cache3.youla.io/files/images/orig/5e/21/5e21a25027a9ab8e0b43b6de.jpg",
+        img: "https://amourrr.com/upload/iblock/a9a/eociwtatzvrioii16shf722mv37bd0zg.jpg",
         title: "Коллекция Осень 2022", 
     },
     {
         id: 3,
-        img: "https://clothesbrand.ru/wp-content/uploads/2021/01/GuglielminottiT-Mattei-1024x576.jpg",
+        img: "https://amourrr.com/local/templates/.default/assets/images/dest/img/frame-image3.jpg",
         title: "О нас", 
     }
 ]
