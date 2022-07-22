@@ -32,7 +32,7 @@ export default function NavBar() {
           <img className='img-logo' src={Logo} alt="" />
         </div>
         <ul className={`nav-links ${!Mobile && "open"}`}>
-          <li onClick={handleClick}>
+          <li onClick={() => setMobile(true)}>
             <Link to="/">Каталог
               {/* <div className='links-dropdown'>
                 <Link to="/list">Посмотреть все</Link>
