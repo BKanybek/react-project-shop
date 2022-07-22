@@ -50,8 +50,7 @@ const Filter = () => {
             "_page": 1
         })
         getProducts()
-    }
-    
+    } 
     
     return (
         <Box sx={{ flexGrow: 1, display: 'flex', paddingTop: '10px'}}>
