@@ -59,9 +59,7 @@
     display: none;
 }
 
-.nav-search-wrapper{
-    order: 3;
-}
+
 
 
 /* .links-dropdown{
@@ -83,6 +81,70 @@
     padding: 10px 0;
 }
 
+
+/* поисковик */
+
+
+.search{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    order: 3;
+
+}
+
+.search-wrapper{
+    display: flex;
+    align-items: center;
+  
+}
+
+.search-input{
+    display: none;
+}
+
+.search-input-active{
+    display: block;
+    /* position: absolute; */
+    /* top: 30px; */
+    /* right: 50px; */
+    /* z-index: 10; */    
+}
+
+.search-input-active::after{
+   transition: all 4s;
+}
+
+.cross-icon{
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    margin-right: 10px;
+}
+
+.search-icon{
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    cursor: pointer;
+    order: 4;
+}
+
+.input-search{
+    padding: 6px 8px;
+}
+
+.input-search::after, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+    /* opacity: 0.2; */
+}
+
+
+/* Адаптация */
+
 @media (max-width: 1024px){
     .navbar-wrapper{
         max-width: 950px;
@@ -93,7 +155,9 @@
     }
 }
 
-@media(width: 901px){
+
+@media all and (max-width: 900px) {
+
     .nav-links{
         display: flex;
         justify-content: flex-start;
@@ -106,11 +170,8 @@
     .nav-links-mobile li{
         display: none;
     }
-}
 
-
-
-@media all and (max-width: 900px) {
+ 
 
     html.noscroll {
         overflow: hidden;
@@ -180,9 +241,21 @@
         order: 2; 
     }
     
-    .nav-search-wrapper{
-        margin-left: 25px;
+
+    .search{
+        position: absolute;
+        /* margin-left: 25px; */
+    }
+    .search-icon{
+        margin: 0 0 0 20px;
         order: 1;
+    }
+    .search-input-active{
+        /* top: 30px; */
+        /* left: auto; */
+    }
+    .input-search{
+        /* width: 600px; */
     }
 
     .icons{
@@ -211,7 +284,7 @@
     .icons a:last-child{
         padding: 0;
     }
-    .nav-search-wrapper{
+    .search{
         padding-left: 0;
     }
     .img-logo{
@@ -225,6 +298,19 @@
     .nav-links{
         top: 7%;
     }
+
+    .search-input-active{
+        top: 16px;
+        right: 7px;
+    }
+
+    .search-wrapper{
+        margin: 0;
+    }
+
+    .input-search{
+        width: 220px;
+    }
 }
 
 
@@ -237,6 +323,14 @@
     .mobile-menu-icon{
         top: 18px;
         left: 10px;
+    }
+
+    .search-input-active{
+        top: 13px;
+    }
+
+    .search-icon{
+        margin: 0 0 0 15px;
     }
 
 }

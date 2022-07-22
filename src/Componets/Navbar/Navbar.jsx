@@ -2,16 +2,18 @@ import { Badge } from '@mui/material';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../Images/Logo/new-logo.png";
-import Search from '../Search/Search';
 import { AiOutlineShopping, AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { useState } from 'react';
 import "./Navbar.css"
 import { useEffect } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
+import SearchIcon from '@mui/icons-material/Search';
 
 export default function NavBar() {
   const [Mobile, setMobile] = useState(true)
+  const [show, setShow] = useState(true)
 
   const handleClick = () => {
     setMobile(!Mobile)
@@ -50,11 +52,18 @@ export default function NavBar() {
             <Link to="/add">Контакты</Link>
           </li>
         </ul>
-        <div className='nav-search-wrapper'>
-          <Search/>
+        <div className='search-icon'>
+           <SearchIcon style={{fontSize: '30px'}} onClick={() => setShow(!show)}/>
         </div>
+        <div className='search'>
+              <div className={`search-input ${!show && 'search-input-active'}`}>
+                  <input className='input-search' type="text" placeholder="Поиск"/>
+                  <div className='cross-icon' onClick={() => setShow(!show)}>
+                      <CloseIcon/>
+                  </div>
+              </div>            
+          </div>
         <div className='icons'>
-            
             <Link to='/cart'>
              <Badge>
                <AiOutlineShopping/>
