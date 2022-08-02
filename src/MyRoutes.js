@@ -20,6 +20,7 @@ const MyRoutes = () => {
                     <Route path='/list' element={<ListProduct/>}/>
                     <Route path='/detail/:id' element={<DetailProduct/>}/>
                     <Route path='/2' element={<Search/>}/>
+                    <Route path='/test' element={<Search/>}/>
                 </Routes>
             </BrowserRouter>
         </ProductsContextProvider>

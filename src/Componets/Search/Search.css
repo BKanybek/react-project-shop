@@ -1,0 +1,29 @@
+.search-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+.search-test{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input-test{
+    display: none;
+}
+
+.search-input-test-active{
+    display: block;
+    /* position: relative; */
+}
+
+.input-search-test{
+    padding: 5px 5px;
+
+}
+.cross-icon-test{
+    position: absolute;
+    top: 6px;
+    right: 7px;
+}
