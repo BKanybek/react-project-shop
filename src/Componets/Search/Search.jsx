@@ -8,9 +8,9 @@ const Search = () => {
     const [showTest, setShowTest] = useState(true)
 
     return (
-        <div className='search-wrapper'>
+        <div className='search-wrapper-test'>
             <div className='icon'>
-            <SearchIcon style={{fontSize: '30px'}} onClick={() => setShowTest(!showTest)}/>
+                <SearchIcon style={{fontSize: '30px'}} onClick={() => setShowTest(!showTest)}/>
             </div>
             <div className='search-test'>
                 <div className={`search-input-test ${!showTest && 'search-input-test-active'}`}>
