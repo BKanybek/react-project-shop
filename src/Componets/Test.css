@@ -1,0 +1,41 @@
+.first{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two{
+    background-color: royalblue;
+    position: relative;
+    width: 600px;
+    height: 100px;
+    /* top: 100px; */
+}
+
+.three{
+    display: none;
+    width: 1px;
+    height: 1px;
+    transition: all 2s;
+}
+
+.three-active{
+    display: block;
+    background-color:green;
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    right: 150px;
+    transition: all 2s;
+    
+}
+
+.three:hover{
+    transform: translate(-20px);
+    transition: ease-in-out 2s;
+}
