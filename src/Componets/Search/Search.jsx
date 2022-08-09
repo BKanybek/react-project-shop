@@ -9,6 +9,9 @@ const Search = () => {
 
     return (
         <div className='search-wrapper-test'>
+            <div className='test-test'>
+                    1
+            </div>
             <div className='icon'>
                 <SearchIcon style={{fontSize: '30px'}} onClick={() => setShowTest(!showTest)}/>
             </div>
@@ -18,7 +21,7 @@ const Search = () => {
                     <div className='cross-icon-test' onClick={() => setShowTest(!showTest)}>
                         <CloseIcon/>
                     </div>
-                </div>            
+                </div>          
             </div>
         </div>
     );

@@ -7,6 +7,7 @@ import ListProduct from './Componets/Admin/ListProduct';
 import Home from './Componets/Home/Home';
 import NavBar from './Componets/Navbar/Navbar';
 import Search from './Componets/Search/Search';
+import Test from './Componets/Test';
 import ProductsContextProvider from './Context/ProductContext';
 
 const MyRoutes = () => {
@@ -21,6 +22,7 @@ const MyRoutes = () => {
                     <Route path='/detail/:id' element={<DetailProduct/>}/>
                     <Route path='/2' element={<Search/>}/>
                     <Route path='/test' element={<Search/>}/>
+                    <Route path='/test1' element={<Test/>}/>
                 </Routes>
             </BrowserRouter>
         </ProductsContextProvider>
