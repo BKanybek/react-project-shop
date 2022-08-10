@@ -10,11 +10,18 @@ import "./Navbar.css"
 import { useEffect } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
+import { useContext } from 'react';
+import { productContext } from '../../Context/ProductContext';
+
+
+
 
 export default function NavBar() {
   const [Mobile, setMobile] = useState(true)
   const [show, setShow] = useState(true)
 
+  const {products} = useContext(productContext)
+  console.log(products);
   const handleClick = () => {
     setMobile(!Mobile)
   }
@@ -61,6 +68,11 @@ export default function NavBar() {
                   <div className='cross-icon' onClick={() => setShow(!show)}>
                       <CloseIcon/>
                   </div>
+                  {/* <div className='data-result'>
+                    {products.map((title, key) => {
+                        return <div> {title.name} </div>
+                    })}
+                  </div> */}
               </div>            
           </div>
         <div className='icons'>
