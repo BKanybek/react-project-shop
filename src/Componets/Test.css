@@ -1,5 +1,6 @@
 .first{
-    background-color: black;
+    background: rgb(34,195,166);
+    background: linear-gradient(0deg, rgba(34,195,166,1) 0%, rgba(169,153,240,1) 100%);
     width: 100%;
     height: 100vh;
     position: relative;
@@ -9,33 +10,40 @@
 }
 
 .two{
-    background-color: royalblue;
+    background-color: rgba(15, 255, 27, 1);;
     position: relative;
     width: 600px;
     height: 100px;
-    /* top: 100px; */
+  
 }
 
 .three{
     display: none;
-    width: 1px;
-    height: 1px;
-    transition: all 2s;
 }
 
-.three-active{
+.three.active{
     display: block;
-    background-color:green;
+    background-color:yellow;
     width: 500px;
     height: 50px;
     position: absolute;
     top: 25px;
-    right: 150px;
-    transition: all 2s;
+    right: 50px;
+    animation-name: testtest;
+    animation-duration: 1s;
     
 }
 
-.three:hover{
-    transform: translate(-20px);
+@keyframes testtest{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 500px;
+    }
+}
+
+.three.active:hover{
+    transform: translate(-200px);
     transition: ease-in-out 2s;
 }

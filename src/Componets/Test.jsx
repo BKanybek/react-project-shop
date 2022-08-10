@@ -12,13 +12,14 @@ const Test = () => {
      <div className='test'>
         <div className='first'>
            <div className='two'>
-                <div className={`three ${!show && 'three-active'}`}>
+                <div className={`three ${!show && 'active'}`}>
                 </div>
                 
 
            </div>
+           <button onClick={() => setShow(!show)}>Нажми</button>
         </div>
-        <button onClick={() => setShow(!show)}>Нажми</button>
+        
      </div>   
     );
 }

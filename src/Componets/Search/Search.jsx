@@ -8,12 +8,9 @@ const Search = () => {
     const [showTest, setShowTest] = useState(true)
 
     return (
-        <div className='search-wrapper-test'>
-            <div className='test-test'>
-                    1
-            </div>
+        <div className='search-wrapper'>
             <div className='icon'>
-                <SearchIcon style={{fontSize: '30px'}} onClick={() => setShowTest(!showTest)}/>
+            <SearchIcon style={{fontSize: '30px'}} onClick={() => setShowTest(!showTest)}/>
             </div>
             <div className='search-test'>
                 <div className={`search-input-test ${!showTest && 'search-input-test-active'}`}>
@@ -21,7 +18,7 @@ const Search = () => {
                     <div className='cross-icon-test' onClick={() => setShowTest(!showTest)}>
                         <CloseIcon/>
                     </div>
-                </div>          
+                </div>            
             </div>
         </div>
     );
