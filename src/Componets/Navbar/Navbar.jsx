@@ -15,16 +15,15 @@ import { productContext } from '../../Context/ProductContext';
 
 
 
-
-export default function NavBar() {
+export default function NavBar(products) {
   const [Mobile, setMobile] = useState(true)
   const [show, setShow] = useState(true)
 
-  const {products, getProducts} = useContext(productContext)
-
+  // const {products, getProducts} = useContext(productContext)
+  console.log(products);
+  
   const[filteredData, setFilteredData] = useState([])
-  const data = products.map([])
-  console.log(data);
+
   const handleFilter = (event) => {
     const searchWord = event.target.value
     const newFilter = products.filter((value) => {
@@ -43,9 +42,9 @@ export default function NavBar() {
     else document.body.style.overflow = 'visible';
   }, [!Mobile])
 
-  useEffect(() => {
-    getProducts()
-  }, [])
+  // useEffect(() => {
+  //   getProducts()
+  // }, [])
   
 
 
