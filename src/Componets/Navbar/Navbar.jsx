@@ -15,21 +15,22 @@ import { productContext } from '../../Context/ProductContext';
 
 
 
-export default function NavBar(products) {
+export default function NavBar() {
   const [Mobile, setMobile] = useState(true)
   const [show, setShow] = useState(true)
 
-  // const {products, getProducts} = useContext(productContext)
-  console.log(products);
-  
-  const[filteredData, setFilteredData] = useState([])
+  const {products, getProducts} = useContext(productContext)
 
-  const handleFilter = (event) => {
-    const searchWord = event.target.value
-    const newFilter = products.filter((value) => {
-      return value.title.includes(searchWord)
-    })
-    setFilteredData(newFilter)
+
+
+  const[value, setValue ] = useState('')
+
+  const onChange = (event) => {
+    setValue(event.target.value)
+  }
+
+  const onSearch = (searchTerm) => {
+    console.log('test', searchTerm);
   }
 
   const handleClick = () => {
@@ -42,9 +43,9 @@ export default function NavBar(products) {
     else document.body.style.overflow = 'visible';
   }, [!Mobile])
 
-  // useEffect(() => {
-  //   getProducts()
-  // }, [])
+  useEffect(() => {
+    getProducts()
+  }, [])
   
 
 
@@ -78,24 +79,18 @@ export default function NavBar(products) {
         </div>
         <div className='search'>
               <div className={`search-input ${!show && 'search-input-active'}`}>
-                  <input className='input-search' type="text" placeholder="Поиск" onChange={handleFilter} />
+                  <input className='input-search' type="text" placeholder="Поиск" value={value} onChange={onChange}/>
                   <div className='cross-icon' onClick={() => setShow(!show)}>
                       <CloseIcon/>
                   </div>
-                  {filteredData.length != 0 && (
                     <div className='data-result'>
                       {
-                        products ? (
                           products.map((item, index) => (
-                            <div className='dataItem'>
+                            <div className='dataItem' onClick={() => onSearch(item.name)}>
                               <p>{item.name}</p>
                             </div>
-                          ))
-                        ): (<h1>Loading...</h1>)
-                      }
+                      ))}
                     </div>
-                    )
-                  }
               </div>            
           </div>
         <div className='icons'>
@@ -122,6 +117,12 @@ export default function NavBar(products) {
   )
 }
 
+
+  // .filter((item => {
+                          //   const searchTerm = value.toLocaleLowerCase();
+                          //   const name = item.name.toLocaleLowerCase();
+                          //   return searchTerm && name.startWith(searchTerm)
+                          // }))
 
 
 
