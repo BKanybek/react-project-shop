@@ -21,7 +21,7 @@ export default function NavBar() {
 
   const {products, getProducts} = useContext(productContext)
 
-
+  console.log(products);
 
   const[value, setValue ] = useState('')
 
@@ -30,6 +30,7 @@ export default function NavBar() {
   }
 
   const onSearch = (searchTerm) => {
+    setValue(searchTerm )
     console.log('test', searchTerm);
   }
 
@@ -83,14 +84,26 @@ export default function NavBar() {
                   <div className='cross-icon' onClick={() => setShow(!show)}>
                       <CloseIcon/>
                   </div>
-                    <div className='data-result'>
+                    
                       {
-                          products.map((item, index) => (
-                            <div className='dataItem' onClick={() => onSearch(item.name)}>
-                              <p>{item.name}</p>
+                        products ? (
+                          products
+                          .filter((item => {
+                              const searchTerm = value.toLocaleLowerCase();
+                              const name = item.name.toLocaleLowerCase();
+                              console.log(item);
+                              return searchTerm && name.startsWith(searchTerm) && name !== searchTerm
+                            })).slice(0, 10)
+                          .map((item, index) => (
+                            <div key={index} className='data-result'>
+                              <div className='dataItem' onClick={() => onSearch(item.name)}>
+                                <p>{item.name}</p>
+                              </div>
                             </div>
-                      ))}
-                    </div>
+                          ))
+                        ): (<h1>Loading...</h1>) 
+                      }
+                    
               </div>            
           </div>
         <div className='icons'>
@@ -109,8 +122,7 @@ export default function NavBar() {
             </Link>
         </div>
         <button className='mobile-menu-icon' onClick={handleClick}>
-          {!Mobile ? <ImCross/> : <FaBars/>}
-          
+          {!Mobile ? <ImCross/> : <FaBars/>}   
         </button>
       </div>
     </>
