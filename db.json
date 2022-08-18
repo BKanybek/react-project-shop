@@ -87,6 +87,126 @@
       "image": "https://amourrr.com/upload/resize_cache/iblock/984/281_341_1/98478254ab1c5b14dec375f420decfdd.jpg",
       "price": 5000,
       "id": 9
+    },
+    {
+      "name": "Test",
+      "type": "кожа",
+      "size": "s",
+      "color": "черный",
+      "description": "1",
+      "image": "https://amourrr.com/upload/resize_cache/iblock/984/281_341_1/98478254ab1c5b14dec375f420decfdd.jpg",
+      "price": 5000,
+      "id": 10
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 11
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 12
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 13
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 14
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 15
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 16
+    },
+    {
+      "name": "Eko Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 17
+    },
+    {
+      "name": "Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 18
+    },
+    {
+      "name": "Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 19
+    },
+    {
+      "name": "Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 20
+    },
+    {
+      "name": "Jeans",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 21
     }
   ]
 }
