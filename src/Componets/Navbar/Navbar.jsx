@@ -21,21 +21,27 @@ export default function NavBar() {
 
   const {products, getProducts} = useContext(productContext)
 
-  console.log(products);
 
   const[value, setValue ] = useState('')
+  console.log(value);
 
   const onChange = (event) => {
     setValue(event.target.value)
   }
 
-  const onSearch = (searchTerm) => {
-    setValue(searchTerm )
-    console.log('test', searchTerm);
+  const onSearch = () => {
+    // setValue(searchTerm )
+    setShow(!show)
+    setValue('')
   }
 
   const handleClick = () => {
     setMobile(!Mobile)
+  }
+
+  const reset = (e) => {
+    setShow(!show);
+    setValue('')
   }
 
 
@@ -81,29 +87,28 @@ export default function NavBar() {
         <div className='search'>
               <div className={`search-input ${!show && 'search-input-active'}`}>
                   <input className='input-search' type="text" placeholder="Поиск" value={value} onChange={onChange}/>
-                  <div className='cross-icon' onClick={() => setShow(!show)}>
+                  <div className='cross-icon' onClick={reset}>
                       <CloseIcon/>
                   </div>
-                    
+                  <div className='data-result'>
                       {
                         products ? (
                           products
                           .filter((item => {
-                              const searchTerm = value.toLocaleLowerCase();
-                              const name = item.name.toLocaleLowerCase();
-                              console.log(item);
-                              return searchTerm && name.startsWith(searchTerm) && name !== searchTerm
+                              const searchTerm = value.toLowerCase();
+                              const fullName = item.name.toLowerCase();
+                              return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm
                             })).slice(0, 10)
                           .map((item, index) => (
-                            <div key={index} className='data-result'>
-                              <div className='dataItem' onClick={() => onSearch(item.name)}>
-                                <p>{item.name}</p>
-                              </div>
-                            </div>
+                              <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
+                                <div className='dataItem'key={index} onClick={() => onSearch(item.name)}>
+                                  <p>{item.name}</p>
+                                </div>
+                              </Link>
                           ))
                         ): (<h1>Loading...</h1>) 
                       }
-                    
+                    </div>
               </div>            
           </div>
         <div className='icons'>
