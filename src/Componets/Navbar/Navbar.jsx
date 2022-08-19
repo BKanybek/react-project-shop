@@ -20,7 +20,6 @@ export default function NavBar() {
   const [show, setShow] = useState(true)
 
   const {products, getProducts} = useContext(productContext)
-  console.log(products);
 
   console.log(products);
 
@@ -45,9 +44,9 @@ export default function NavBar() {
     else document.body.style.overflow = 'visible';
   }, [!Mobile])
 
-  // useEffect(() => {
-  //   getProducts()
-  // }, [])
+  useEffect(() => {
+    getProducts()
+  }, [])
   
 
 
@@ -85,7 +84,7 @@ export default function NavBar() {
                   <div className='cross-icon' onClick={() => setShow(!show)}>
                       <CloseIcon/>
                   </div>
-                    
+                  <div className='data-result'>
                       {
                         products ? (
                           products
@@ -96,15 +95,16 @@ export default function NavBar() {
                               return searchTerm && name.startsWith(searchTerm) && name !== searchTerm
                             })).slice(0, 10)
                           .map((item, index) => (
-                            <div key={index} className='data-result'>
+                            
                               <div className='dataItem' onClick={() => onSearch(item.name)}>
                                 <p>{item.name}</p>
                               </div>
-                            </div>
+                            
                           ))
                         ): (<h1>Loading...</h1>) 
                       }
-                    
+                    </div>
+
               </div>            
           </div>
         <div className='icons'>
