@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from "../Images/Logo/new-logo.png";
 import { AiOutlineShopping, AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
-import { ImCross } from "react-icons/im";
+import { ImCross, ImTab } from "react-icons/im";
 import { useState } from 'react';
 import "./Navbar.css"
 import { useEffect } from 'react';
@@ -21,21 +21,29 @@ export default function NavBar() {
 
   const {products, getProducts} = useContext(productContext)
 
-  console.log(products);
 
   const[value, setValue ] = useState('')
+  const[filterData, setFilterData] = useState([])
+
+  console.log(value);
 
   const onChange = (event) => {
     setValue(event.target.value)
   }
 
-  const onSearch = (searchTerm) => {
-    setValue(searchTerm )
-    console.log('test', searchTerm);
+  const onSearch = () => {
+    // setValue(searchTerm )
+    setShow(!show)
+    setValue('')
   }
 
   const handleClick = () => {
     setMobile(!Mobile)
+  }
+
+  const reset = (e) => {
+    setShow(!show);
+    setValue('')
   }
 
 
@@ -81,7 +89,7 @@ export default function NavBar() {
         <div className='search'>
               <div className={`search-input ${!show && 'search-input-active'}`}>
                   <input className='input-search' type="text" placeholder="Поиск" value={value} onChange={onChange}/>
-                  <div className='cross-icon' onClick={() => setShow(!show)}>
+                  <div className='cross-icon' onClick={reset}>
                       <CloseIcon/>
                   </div>
                   <div className='data-result'>
@@ -89,22 +97,19 @@ export default function NavBar() {
                         products ? (
                           products
                           .filter((item => {
-                              const searchTerm = value.toLocaleLowerCase();
-                              const name = item.name.toLocaleLowerCase();
-                              console.log(item);
-                              return searchTerm && name.startsWith(searchTerm) && name !== searchTerm
+                              return item.name.includes(onChange)
                             })).slice(0, 10)
                           .map((item, index) => (
-                            
-                              <div className='dataItem' onClick={() => onSearch(item.name)}>
-                                <p>{item.name}</p>
-                              </div>
-                            
+
+                              <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
+                                <div className='dataItem'key={index} onClick={() => onSearch(item.name)}>
+                                  <p>{item.name}</p>
+                                </div>
+                              </Link>
                           ))
                         ): (<h1>Loading...</h1>) 
                       }
                     </div>
-
               </div>            
           </div>
         <div className='icons'>
