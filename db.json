@@ -207,6 +207,16 @@
       "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
       "price": 4000,
       "id": 21
+    },
+    {
+      "name": "summer jeans classic",
+      "type": "Jeans",
+      "size": "XL",
+      "color": "RED",
+      "description": "1123",
+      "image": "https://www.westland.ru/upload/iblock/47d/47d210fcccb3578a58b1393b07967ed4.jpg",
+      "price": 4000,
+      "id": 22
     }
   ]
 }

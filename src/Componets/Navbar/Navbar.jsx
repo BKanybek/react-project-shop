@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from "../Images/Logo/new-logo.png";
 import { AiOutlineShopping, AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
-import { ImCross, ImTab } from "react-icons/im";
+import { ImCross } from "react-icons/im";
 import { useState } from 'react';
 import "./Navbar.css"
 import { useEffect } from 'react';
@@ -23,9 +23,6 @@ export default function NavBar() {
 
 
   const[value, setValue ] = useState('')
-  const[filterData, setFilterData] = useState([])
-
-  console.log(value);
 
   const onChange = (event) => {
     setValue(event.target.value)
@@ -97,10 +94,11 @@ export default function NavBar() {
                         products ? (
                           products
                           .filter((item => {
-                              return item.name.includes(onChange)
-                            })).slice(0, 10)
+                              const searchTerm = value.toLowerCase();
+                              const fullName = item.name.toLowerCase();
+                              return searchTerm && fullName.includes(searchTerm) && fullName !== searchTerm
+                            }))
                           .map((item, index) => (
-
                               <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
                                 <div className='dataItem'key={index} onClick={() => onSearch(item.name)}>
                                   <p>{item.name}</p>
