@@ -25,11 +25,10 @@ const ListProduct = () => {
                     {
                         products ? (
                             products.map((item, index) => (
-                                <>
-                                    <Grid  item xs={2} sm={4} md={4} key={index}>
-                                        <ProductCard item={item} key={index}/>
-                                    </Grid>
-                                </>
+                                 <Grid  item xs={2} sm={4} md={4} key={index}>
+                                    <ProductCard item={item} key={index}/>
+                                </Grid>
+
                             ))
                         ): (<h1>Loading...</h1>)
                     }

@@ -23,7 +23,6 @@ export default function NavBar() {
 
 
   const[value, setValue ] = useState('')
-  console.log(value);
 
   const onChange = (event) => {
     setValue(event.target.value)
@@ -97,8 +96,8 @@ export default function NavBar() {
                           .filter((item => {
                               const searchTerm = value.toLowerCase();
                               const fullName = item.name.toLowerCase();
-                              return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm
-                            })).slice(0, 10)
+                              return searchTerm && fullName.includes(searchTerm) && fullName !== searchTerm
+                            }))
                           .map((item, index) => (
                               <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
                                 <div className='dataItem'key={index} onClick={() => onSearch(item.name)}>
