@@ -5,10 +5,10 @@
     max-width: 1300px;
     margin: auto;
     height: 100px;
+    position: relative;
 }
 
 .logo{
-    /* flex-shrink: 1; */
     padding-bottom: 5px;
     order: 1;
 }
@@ -23,7 +23,6 @@
     order: 2;
 }
 
-
 .nav-links li a{
     text-decoration: none;
     color: black;
@@ -31,7 +30,6 @@
     font-weight: 500;
     padding: 0 20px;
 }
-
 
 .icons{
     display: flex;
@@ -51,16 +49,12 @@
     padding: 0 0 0 20px;
 }
 
-
 .mobile-menu-icon{
     border: none;
     background: none;
     font-size: 20px;
     display: none;
 }
-
-
-
 
 /* .links-dropdown{
     display: none;
@@ -88,24 +82,23 @@
 .search{
     display: flex;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    z-index: 500;
+    right: 250px;
     order: 3;
-
 }
-
 
 .search-input{
     display: none;
+    /* width: 100%; */
+    
 }
 
 .search-input-active{
     display: block; 
-    position: relative;
     width: 100%;
-    animation-name: search-animation;
-    animation-duration: 1s;
     
-    
+   
 }
 
 .cross-icon{
@@ -128,21 +121,22 @@
 .input-search{
     padding: 6px 8px;
     width: 300px;
+    animation-name: search-animation;
+    animation-duration: 1s; 
     
 }
 
 .input-search::after, :hover, :focus {
     outline: 0;
     outline-offset: 0;
-    /* opacity: 0.2; */
 }
 
 @keyframes search-animation{
     0%{
-        width: 0%;
+        width: 0px;
     }
     100%{
-        width: 100%;
+        width: 300px;
     }
 }
 
@@ -175,7 +169,6 @@
     cursor: pointer;
 }
 
-
 /* Адаптация */
 
 @media (max-width: 1024px){
@@ -187,7 +180,6 @@
        padding: 0 5px;
     }
 }
-
 
 @media all and (max-width: 900px) {
 
@@ -224,13 +216,13 @@
         display: block;
         box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
         left: 0;
-        top: 10%;
+        top: 90px;
         width: 100%;
         background-color: white;
         transition: all 1s ease-in-out;
-        z-index: 5;
+        z-index: 444;
         padding: 40px 20px 0 20px;
-        height: 100%;
+        height: 100vh;
         transform: translateX(-100%);
         transition: all .45s;
     }
@@ -258,7 +250,6 @@
         padding: 14px 0px;
     }    
 
-
     .mobile-menu-icon{
         display: block;
         position: absolute;
@@ -267,39 +258,38 @@
     }
 
     .logo{
-        /* flex-shrink: 1; */
         padding-bottom: 5px;
         display: flex;
         justify-content: center;
         order: 2; 
     }
     
-
     .search{
         position: absolute;
         right: 22px;
-        z-index: 11;
+        z-index: 5555;
         display: flex;
         justify-content: flex-end;
         width: 84%;
-        /* order: 10; */
-        /* margin-left: 25px; */
     }
     .search-icon{
         margin: 0 0 0 20px;
         order: 1;
     }
+
+    .search-input{
+        /* width: 100%; */
+    }
+
     .search-input-active{
         width: 100%;
         animation-name: search-animation;
-        animation-duration: 0.5s;
-        
+        animation-duration: 0.5s;  
     }
 
     .input-search{
         width: 100%;
-        margin: 0 20px 0 0px;
-        
+        margin: 0 20px 0 0px;  
     }
 
     .icons{
@@ -316,7 +306,7 @@
 
     @keyframes search-animation{
         0%{
-            width: 0px;
+            width: 0%;
         }
         100%{
             width: 100%;
@@ -327,8 +317,6 @@
         width: 100%;
     }
 }
-
-
 
 @media all and (max-width: 425px){
     .navbar-wrapper{
@@ -350,10 +338,9 @@
     }
     .mobile-menu-icon{
         top: 18px;
-        /* left: 20px; */
     }
     .nav-links{
-        top: 7%;
+        top: 60px;
     }
 
     .search{
@@ -372,7 +359,6 @@
 }
 
 
-
 @media all and (max-width: 320px){
     .search{
         right: 11px;
@@ -385,10 +371,6 @@
     .mobile-menu-icon{
         top: 18px;
         left: 10px;
-    }
-
-    .search-input-active{
-        /* top: 13px; */
     }
 
     .search-icon{
