@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../Images/Logo/new-logo.png";
 import { AiOutlineShopping, AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { useState } from 'react';
@@ -12,12 +13,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 import { useContext } from 'react';
 import { productContext } from '../../Context/ProductContext';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 
 export default function NavBar() {
   const [Mobile, setMobile] = useState(true)
   const [show, setShow] = useState(true)
+  const [drop, setDrop] = useState(true)
 
   const {products, getProducts} = useContext(productContext)
 
@@ -32,6 +35,7 @@ export default function NavBar() {
     // setValue(searchTerm )
     setShow(!show)
     setValue('')
+    setMobile(true)
   }
 
   const handleClick = () => {
@@ -42,6 +46,10 @@ export default function NavBar() {
     setShow(!show);
     setValue('')
   }
+
+  // const dropdown = () => {
+  //   setDrop(!drop)
+  // }
 
 
   useEffect(() =>{
@@ -62,19 +70,20 @@ export default function NavBar() {
           <img className='img-logo' src={Logo} alt="" />
         </div>
         <ul className={`nav-links ${!Mobile && "open"}`}>
+          <Link className='drop-wrapper' to="/" onClick={() => setDrop(!drop)}>Каталог
+                <ExpandMoreIcon/>
+                <div className={`links-dropdown ${!drop && 'dropdown'}`}>
+                  <Link to="/list">Посмотреть все</Link>
+                  <Link to="/add">Кожа</Link>
+                  <Link to="/">Джинсы</Link>
+                  <Link to="/add">Топы и Рубашки</Link>
+                  <Link to="/">Юбки и Платья</Link>
+                  <Link to="/add">Брюки и шорты</Link>
+                  <Link to="/add">Деним</Link>
+                  <Link to="/add">Верхняя одежда</Link>
+                </div>
+              </Link>
           <li onClick={() => setMobile(true)}>
-            <Link to="/">Каталог
-              {/* <div className='links-dropdown'>
-                <Link to="/list">Посмотреть все</Link>
-                <Link to="/add">Кожа</Link>
-                <Link to="/">Джинсы</Link>
-                <Link to="/add">Топы и Рубашки</Link>
-                <Link to="/">Юбки и Платья</Link>
-                <Link to="/add">Брюки и шорты</Link>
-                <Link to="/add">Деним</Link>
-                <Link to="/add">Верхняя одежда</Link>
-              </div> */}
-            </Link>
             <Link to="/list" >О брендe</Link>
             <Link to="/">Таблица размеров</Link>
             <Link to="/add">Контакты</Link>
