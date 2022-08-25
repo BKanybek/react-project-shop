@@ -72,7 +72,7 @@ export default function NavBar() {
         <ul className={`nav-links ${!Mobile && "open"}`}>
           <Link className='drop-wrapper' to="/" onClick={() => setDrop(!drop)}>Каталог
                 <ExpandMoreIcon/>
-                <div className={`links-dropdown ${!drop && 'drop-list'}`}>
+                <div className={`links-dropdown ${!drop && 'active'}`}>
                   <Link to="/list">Посмотреть все</Link>
                   <Link to="/add">Кожа</Link>
                   <Link to="/">Джинсы</Link>
