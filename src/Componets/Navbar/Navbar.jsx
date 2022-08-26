@@ -70,9 +70,9 @@ export default function NavBar() {
           <img className='img-logo' src={Logo} alt="" />
         </div>
         <ul className={`nav-links ${!Mobile && "open"}`}>
-          <Link className='drop-wrapper' to="/" onClick={() => setDrop(!drop)}>Каталог
+          <div className='drop-wrapper' to="/" onClick={() => setDrop(!drop)}>Каталог
                 <ExpandMoreIcon/>
-                <div className={`links-dropdown ${!drop && 'drop-list'}`}>
+                <div className={`links-dropdown ${!drop && 'drop-list'}`} onClick={() => setMobile(true)}>
                   <Link to="/list">Посмотреть все</Link>
                   <Link to="/add">Кожа</Link>
                   <Link to="/">Джинсы</Link>
@@ -82,7 +82,7 @@ export default function NavBar() {
                   <Link to="/add">Деним</Link>
                   <Link to="/add">Верхняя одежда</Link>
                 </div>
-              </Link>
+              </div>
           <li onClick={() => setMobile(true)}>
             <Link to="/list" >О брендe</Link>
             <Link to="/">Таблица размеров</Link>
