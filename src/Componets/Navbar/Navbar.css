@@ -70,7 +70,7 @@
     text-decoration: none;
     color: black;
     font-size: 18px;
-    height: 100%;
+    /* height: 100%; */
    
 }
 
@@ -94,7 +94,6 @@
     margin-top: 15px;
     animation-name: drop-animation;
     animation-duration: 0.5s; 
-    background-color: pink;
     
 }
 
@@ -103,7 +102,7 @@
     font-size: 16px;
     text-decoration: none;
     color: black;
-    animation-duration: 00.5s;
+    animation: lists 1.3s;
     
 
 }
@@ -119,6 +118,15 @@
         height: 360px;
     }
 
+}
+
+@keyframes lists{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 
